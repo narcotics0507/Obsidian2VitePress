@@ -1,0 +1,35 @@
+:root {
+  /* Increase sidebar width (default is around 272px) */
+  --vp-sidebar-width: 320px;
+}
+
+/* Adjust content padding to accommodate wider sidebar if needed (VitePress usually handles this via media queries) */
+@media (min-width: 960px) {
+  .VPContent {
+    padding-left: var(--vp-sidebar-width);
+  }
+}
+
+/* Sidebar Text Styling */
+.VPSidebarItem .text {
+  /* Allow text to wrap naturally */
+  white-space: normal;
+  /* Ensure line height is comfortable for multi-line text */
+  line-height: 1.4;
+  /* Add a bit of spacing between items */
+  padding-right: 8px;
+}
+
+/* Optional: Improve scrollbar appearance in sidebar */
+.VPSidebar {
+  scrollbar-width: thin;
+}
+
+.VPSidebar::-webkit-scrollbar {
+  width: 6px;
+}
+
+.VPSidebar::-webkit-scrollbar-thumb {
+  background-color: var(--vp-c-divider);
+  border-radius: 3px;
+}

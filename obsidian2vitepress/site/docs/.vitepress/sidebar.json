@@ -1,0 +1,1350 @@
+{
+  "/Golang/": [
+    {
+      "text": "Break语句",
+      "link": "/Golang/Break%E8%AF%AD%E5%8F%A5"
+    },
+    {
+      "text": "ChannelAll",
+      "collapsed": true,
+      "items": [
+        {
+          "text": "Channel管道注意事项",
+          "link": "/Golang/ChannelAll/Channel%E7%AE%A1%E9%81%93%E6%B3%A8%E6%84%8F%E4%BA%8B%E9%A1%B9"
+        },
+        {
+          "text": "goroutine 中使用 recover，解决协程中出现 panic，导致程序崩溃问题",
+          "link": "/Golang/ChannelAll/goroutine%20%E4%B8%AD%E4%BD%BF%E7%94%A8%20recover%EF%BC%8C%E8%A7%A3%E5%86%B3%E5%8D%8F%E7%A8%8B%E4%B8%AD%E5%87%BA%E7%8E%B0%20panic%EF%BC%8C%E5%AF%BC%E8%87%B4%E7%A8%8B%E5%BA%8F%E5%B4%A9%E6%BA%83%E9%97%AE%E9%A2%98"
+        }
+      ]
+    },
+    {
+      "text": "Gin框架",
+      "collapsed": true,
+      "items": [
+        {
+          "text": "1_Gin内容介绍",
+          "collapsed": true,
+          "items": [
+            {
+              "text": "README",
+              "link": "/Golang/Gin%E6%A1%86%E6%9E%B6/1_Gin%E5%86%85%E5%AE%B9%E4%BB%8B%E7%BB%8D/README"
+            }
+          ]
+        },
+        {
+          "text": "2_http及Template介绍",
+          "collapsed": true,
+          "items": [
+            {
+              "text": "README",
+              "link": "/Golang/Gin%E6%A1%86%E6%9E%B6/2_http%E5%8F%8ATemplate%E4%BB%8B%E7%BB%8D/README"
+            }
+          ]
+        },
+        {
+          "text": "3_GORM介绍和使用",
+          "collapsed": true,
+          "items": [
+            {
+              "text": "README",
+              "link": "/Golang/Gin%E6%A1%86%E6%9E%B6/3_GORM%E4%BB%8B%E7%BB%8D%E5%92%8C%E4%BD%BF%E7%94%A8/README"
+            }
+          ]
+        },
+        {
+          "text": "4_GORM进行CURD",
+          "collapsed": true,
+          "items": [
+            {
+              "text": "README",
+              "link": "/Golang/Gin%E6%A1%86%E6%9E%B6/4_GORM%E8%BF%9B%E8%A1%8CCURD/README"
+            }
+          ]
+        },
+        {
+          "text": "README",
+          "link": "/Golang/Gin%E6%A1%86%E6%9E%B6/README"
+        }
+      ]
+    }
+  ],
+  "/夜莺/": [
+    {
+      "text": "Categraf",
+      "collapsed": true,
+      "items": [
+        {
+          "text": "MySQL监控",
+          "collapsed": true,
+          "items": [
+            {
+              "text": "MySQL8.4.4监控主从同步",
+              "link": "/%E5%A4%9C%E8%8E%BA/Categraf/MySQL%E7%9B%91%E6%8E%A7/MySQL8.4.4%E7%9B%91%E6%8E%A7%E4%B8%BB%E4%BB%8E%E5%90%8C%E6%AD%A5"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "/工作/": [
+    {
+      "text": "java启动脚本",
+      "link": "/%E5%B7%A5%E4%BD%9C/java%E5%90%AF%E5%8A%A8%E8%84%9A%E6%9C%AC"
+    },
+    {
+      "text": "临时MySQL相关",
+      "collapsed": true,
+      "items": [
+        {
+          "text": "139修改",
+          "link": "/%E5%B7%A5%E4%BD%9C/%E4%B8%B4%E6%97%B6MySQL%E7%9B%B8%E5%85%B3/139%E4%BF%AE%E6%94%B9"
+        },
+        {
+          "text": "MySQL 数据库使用规范",
+          "link": "/%E5%B7%A5%E4%BD%9C/%E4%B8%B4%E6%97%B6MySQL%E7%9B%B8%E5%85%B3/MySQL%20%E6%95%B0%E6%8D%AE%E5%BA%93%E4%BD%BF%E7%94%A8%E8%A7%84%E8%8C%83"
+        },
+        {
+          "text": "MySQL大表",
+          "link": "/%E5%B7%A5%E4%BD%9C/%E4%B8%B4%E6%97%B6MySQL%E7%9B%B8%E5%85%B3/MySQL%E5%A4%A7%E8%A1%A8"
+        },
+        {
+          "text": "SQL 操作注意事项",
+          "link": "/%E5%B7%A5%E4%BD%9C/%E4%B8%B4%E6%97%B6MySQL%E7%9B%B8%E5%85%B3/SQL%20%E6%93%8D%E4%BD%9C%E6%B3%A8%E6%84%8F%E4%BA%8B%E9%A1%B9"
+        },
+        {
+          "text": "针对于大表分时间段备份",
+          "link": "/%E5%B7%A5%E4%BD%9C/%E4%B8%B4%E6%97%B6MySQL%E7%9B%B8%E5%85%B3/%E9%92%88%E5%AF%B9%E4%BA%8E%E5%A4%A7%E8%A1%A8%E5%88%86%E6%97%B6%E9%97%B4%E6%AE%B5%E5%A4%87%E4%BB%BD"
+        }
+      ]
+    },
+    {
+      "text": "前端发版脚本",
+      "link": "/%E5%B7%A5%E4%BD%9C/%E5%89%8D%E7%AB%AF%E5%8F%91%E7%89%88%E8%84%9A%E6%9C%AC"
+    },
+    {
+      "text": "常用SQL",
+      "collapsed": true,
+      "items": [
+        {
+          "text": "time",
+          "link": "/%E5%B7%A5%E4%BD%9C/%E5%B8%B8%E7%94%A8SQL/time"
+        },
+        {
+          "text": "常用",
+          "link": "/%E5%B7%A5%E4%BD%9C/%E5%B8%B8%E7%94%A8SQL/%E5%B8%B8%E7%94%A8"
+        },
+        {
+          "text": "还原库",
+          "link": "/%E5%B7%A5%E4%BD%9C/%E5%B8%B8%E7%94%A8SQL/%E8%BF%98%E5%8E%9F%E5%BA%93"
+        }
+      ]
+    }
+  ],
+  "/插件目录/": [
+    {
+      "text": "obsidian-tools",
+      "link": "/%E6%8F%92%E4%BB%B6%E7%9B%AE%E5%BD%95/obsidian-tools"
+    }
+  ],
+  "/数据库/": [
+    {
+      "text": "clickhouse列式数据库",
+      "collapsed": true,
+      "items": [
+        {
+          "text": "docker",
+          "link": "/%E6%95%B0%E6%8D%AE%E5%BA%93/clickhouse%E5%88%97%E5%BC%8F%E6%95%B0%E6%8D%AE%E5%BA%93/docker"
+        }
+      ]
+    },
+    {
+      "text": "Mysql",
+      "collapsed": true,
+      "items": [
+        {
+          "text": "MySQL分区资料",
+          "collapsed": true,
+          "items": [
+            {
+              "text": "MySQL分区",
+              "link": "/%E6%95%B0%E6%8D%AE%E5%BA%93/Mysql/MySQL%E5%88%86%E5%8C%BA%E8%B5%84%E6%96%99/MySQL%E5%88%86%E5%8C%BA"
+            }
+          ]
+        },
+        {
+          "text": "other",
+          "collapsed": true,
+          "items": [
+            {
+              "text": "sql_safe_updates=1  -- 激活数据库安全模式",
+              "link": "/%E6%95%B0%E6%8D%AE%E5%BA%93/Mysql/other/sql_safe_updates=1%20%20--%20%E6%BF%80%E6%B4%BB%E6%95%B0%E6%8D%AE%E5%BA%93%E5%AE%89%E5%85%A8%E6%A8%A1%E5%BC%8F"
+            },
+            {
+              "text": "数据库服务授权表介绍",
+              "link": "/%E6%95%B0%E6%8D%AE%E5%BA%93/Mysql/other/%E6%95%B0%E6%8D%AE%E5%BA%93%E6%9C%8D%E5%8A%A1%E6%8E%88%E6%9D%83%E8%A1%A8%E4%BB%8B%E7%BB%8D"
+            }
+          ]
+        },
+        {
+          "text": "主从配置",
+          "collapsed": true,
+          "items": [
+            {
+              "text": "mysql8.4.4 主从gtid可能会遇到的问题",
+              "link": "/%E6%95%B0%E6%8D%AE%E5%BA%93/Mysql/%E4%B8%BB%E4%BB%8E%E9%85%8D%E7%BD%AE/mysql8.4.4%20%E4%B8%BB%E4%BB%8Egtid%E5%8F%AF%E8%83%BD%E4%BC%9A%E9%81%87%E5%88%B0%E7%9A%84%E9%97%AE%E9%A2%98"
+            },
+            {
+              "text": "mysql主从配置-GTID",
+              "link": "/%E6%95%B0%E6%8D%AE%E5%BA%93/Mysql/%E4%B8%BB%E4%BB%8E%E9%85%8D%E7%BD%AE/mysql%E4%B8%BB%E4%BB%8E%E9%85%8D%E7%BD%AE-GTID"
+            },
+            {
+              "text": "mysql主从配置-position",
+              "link": "/%E6%95%B0%E6%8D%AE%E5%BA%93/Mysql/%E4%B8%BB%E4%BB%8E%E9%85%8D%E7%BD%AE/mysql%E4%B8%BB%E4%BB%8E%E9%85%8D%E7%BD%AE-position"
+            },
+            {
+              "text": "主从配置文件-正式",
+              "link": "/%E6%95%B0%E6%8D%AE%E5%BA%93/Mysql/%E4%B8%BB%E4%BB%8E%E9%85%8D%E7%BD%AE/%E4%B8%BB%E4%BB%8E%E9%85%8D%E7%BD%AE%E6%96%87%E4%BB%B6-%E6%AD%A3%E5%BC%8F"
+            }
+          ]
+        },
+        {
+          "text": "备份方案",
+          "collapsed": true,
+          "items": [
+            {
+              "text": "mysql备份脚本",
+              "link": "/%E6%95%B0%E6%8D%AE%E5%BA%93/Mysql/%E5%A4%87%E4%BB%BD%E6%96%B9%E6%A1%88/mysql%E5%A4%87%E4%BB%BD%E8%84%9A%E6%9C%AC"
+            },
+            {
+              "text": "MySQL规范",
+              "link": "/%E6%95%B0%E6%8D%AE%E5%BA%93/Mysql/%E5%A4%87%E4%BB%BD%E6%96%B9%E6%A1%88/MySQL%E8%A7%84%E8%8C%83"
+            },
+            {
+              "text": "备份主机",
+              "collapsed": true,
+              "items": [
+                {
+                  "text": "Powershell",
+                  "collapsed": true,
+                  "items": [
+                    {
+                      "text": "Powershell 备份脚本及触发器",
+                      "link": "/%E6%95%B0%E6%8D%AE%E5%BA%93/Mysql/%E5%A4%87%E4%BB%BD%E6%96%B9%E6%A1%88/%E5%A4%87%E4%BB%BD%E4%B8%BB%E6%9C%BA/Powershell/Powershell%20%E5%A4%87%E4%BB%BD%E8%84%9A%E6%9C%AC%E5%8F%8A%E8%A7%A6%E5%8F%91%E5%99%A8"
+                    },
+                    {
+                      "text": "备份时间安排",
+                      "link": "/%E6%95%B0%E6%8D%AE%E5%BA%93/Mysql/%E5%A4%87%E4%BB%BD%E6%96%B9%E6%A1%88/%E5%A4%87%E4%BB%BD%E4%B8%BB%E6%9C%BA/Powershell/%E5%A4%87%E4%BB%BD%E6%97%B6%E9%97%B4%E5%AE%89%E6%8E%92"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "text": "物理备份Xtrabackup",
+              "link": "/%E6%95%B0%E6%8D%AE%E5%BA%93/Mysql/%E5%A4%87%E4%BB%BD%E6%96%B9%E6%A1%88/%E7%89%A9%E7%90%86%E5%A4%87%E4%BB%BDXtrabackup"
+            },
+            {
+              "text": "物理备份数据恢复测试",
+              "link": "/%E6%95%B0%E6%8D%AE%E5%BA%93/Mysql/%E5%A4%87%E4%BB%BD%E6%96%B9%E6%A1%88/%E7%89%A9%E7%90%86%E5%A4%87%E4%BB%BD%E6%95%B0%E6%8D%AE%E6%81%A2%E5%A4%8D%E6%B5%8B%E8%AF%95"
+            },
+            {
+              "text": "逻辑备份mysqldump",
+              "link": "/%E6%95%B0%E6%8D%AE%E5%BA%93/Mysql/%E5%A4%87%E4%BB%BD%E6%96%B9%E6%A1%88/%E9%80%BB%E8%BE%91%E5%A4%87%E4%BB%BDmysqldump"
+            }
+          ]
+        },
+        {
+          "text": "学习资料",
+          "collapsed": true,
+          "items": [
+            {
+              "text": "MySQL8",
+              "collapsed": true,
+              "items": [
+                {
+                  "text": "存储过程 PROCEDURE",
+                  "link": "/%E6%95%B0%E6%8D%AE%E5%BA%93/Mysql/%E5%AD%A6%E4%B9%A0%E8%B5%84%E6%96%99/MySQL8/%E5%AD%98%E5%82%A8%E8%BF%87%E7%A8%8B%20PROCEDURE"
+                },
+                {
+                  "text": "索引 Index",
+                  "link": "/%E6%95%B0%E6%8D%AE%E5%BA%93/Mysql/%E5%AD%A6%E4%B9%A0%E8%B5%84%E6%96%99/MySQL8/%E7%B4%A2%E5%BC%95%20Index"
+                },
+                {
+                  "text": "触发器 Trigger",
+                  "link": "/%E6%95%B0%E6%8D%AE%E5%BA%93/Mysql/%E5%AD%A6%E4%B9%A0%E8%B5%84%E6%96%99/MySQL8/%E8%A7%A6%E5%8F%91%E5%99%A8%20Trigger"
+                }
+              ]
+            },
+            {
+              "text": "MySQL忘记密码解决方案",
+              "link": "/%E6%95%B0%E6%8D%AE%E5%BA%93/Mysql/%E5%AD%A6%E4%B9%A0%E8%B5%84%E6%96%99/MySQL%E5%BF%98%E8%AE%B0%E5%AF%86%E7%A0%81%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88"
+            },
+            {
+              "text": "常用SQL",
+              "link": "/%E6%95%B0%E6%8D%AE%E5%BA%93/Mysql/%E5%AD%A6%E4%B9%A0%E8%B5%84%E6%96%99/%E5%B8%B8%E7%94%A8SQL"
+            }
+          ]
+        },
+        {
+          "text": "巡检报告",
+          "collapsed": true,
+          "items": [
+            {
+              "text": "月度巡检模板",
+              "link": "/%E6%95%B0%E6%8D%AE%E5%BA%93/Mysql/%E5%B7%A1%E6%A3%80%E6%8A%A5%E5%91%8A/%E6%9C%88%E5%BA%A6%E5%B7%A1%E6%A3%80%E6%A8%A1%E6%9D%BF"
+            }
+          ]
+        },
+        {
+          "text": "部署与升级",
+          "collapsed": true,
+          "items": [
+            {
+              "text": "centos7.9 部署 8.x",
+              "link": "/%E6%95%B0%E6%8D%AE%E5%BA%93/Mysql/%E9%83%A8%E7%BD%B2%E4%B8%8E%E5%8D%87%E7%BA%A7/centos7.9%20%E9%83%A8%E7%BD%B2%208.x"
+            },
+            {
+              "text": "mysql57升级8.0.26",
+              "link": "/%E6%95%B0%E6%8D%AE%E5%BA%93/Mysql/%E9%83%A8%E7%BD%B2%E4%B8%8E%E5%8D%87%E7%BA%A7/mysql57%E5%8D%87%E7%BA%A78.0.26"
+            },
+            {
+              "text": "mysql多实例",
+              "link": "/%E6%95%B0%E6%8D%AE%E5%BA%93/Mysql/%E9%83%A8%E7%BD%B2%E4%B8%8E%E5%8D%87%E7%BA%A7/mysql%E5%A4%9A%E5%AE%9E%E4%BE%8B"
+            },
+            {
+              "text": "二进制5.6 5.7",
+              "link": "/%E6%95%B0%E6%8D%AE%E5%BA%93/Mysql/%E9%83%A8%E7%BD%B2%E4%B8%8E%E5%8D%87%E7%BA%A7/%E4%BA%8C%E8%BF%9B%E5%88%B65.6%205.7"
+            },
+            {
+              "text": "二进制部署mysql8.0.26",
+              "link": "/%E6%95%B0%E6%8D%AE%E5%BA%93/Mysql/%E9%83%A8%E7%BD%B2%E4%B8%8E%E5%8D%87%E7%BA%A7/%E4%BA%8C%E8%BF%9B%E5%88%B6%E9%83%A8%E7%BD%B2mysql8.0.26"
+            },
+            {
+              "text": "常用命令",
+              "link": "/%E6%95%B0%E6%8D%AE%E5%BA%93/Mysql/%E9%83%A8%E7%BD%B2%E4%B8%8E%E5%8D%87%E7%BA%A7/%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "text": "Postgresql",
+      "collapsed": true,
+      "items": [
+        {
+          "text": "Sql",
+          "collapsed": true,
+          "items": [
+            {
+              "text": "数据库释放连接池 转至元数据结尾",
+              "link": "/%E6%95%B0%E6%8D%AE%E5%BA%93/Postgresql/Sql/%E6%95%B0%E6%8D%AE%E5%BA%93%E9%87%8A%E6%94%BE%E8%BF%9E%E6%8E%A5%E6%B1%A0%20%E8%BD%AC%E8%87%B3%E5%85%83%E6%95%B0%E6%8D%AE%E7%BB%93%E5%B0%BE"
+            },
+            {
+              "text": "根据表注释找表",
+              "link": "/%E6%95%B0%E6%8D%AE%E5%BA%93/Postgresql/Sql/%E6%A0%B9%E6%8D%AE%E8%A1%A8%E6%B3%A8%E9%87%8A%E6%89%BE%E8%A1%A8"
+            }
+          ]
+        },
+        {
+          "text": "部署与升级",
+          "collapsed": true,
+          "items": [
+            {
+              "text": "银河麒麟",
+              "collapsed": true,
+              "items": [
+                {
+                  "text": "银河麒麟安装postgresql-11",
+                  "link": "/%E6%95%B0%E6%8D%AE%E5%BA%93/Postgresql/%E9%83%A8%E7%BD%B2%E4%B8%8E%E5%8D%87%E7%BA%A7/%E9%93%B6%E6%B2%B3%E9%BA%92%E9%BA%9F/%E9%93%B6%E6%B2%B3%E9%BA%92%E9%BA%9F%E5%AE%89%E8%A3%85postgresql-11"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "text": "人大金仓Kingbase",
+      "collapsed": true,
+      "items": [
+        {
+          "text": "人大金仓Kingbase部署",
+          "link": "/%E6%95%B0%E6%8D%AE%E5%BA%93/%E4%BA%BA%E5%A4%A7%E9%87%91%E4%BB%93Kingbase/%E4%BA%BA%E5%A4%A7%E9%87%91%E4%BB%93Kingbase%E9%83%A8%E7%BD%B2"
+        },
+        {
+          "text": "人大金仓替换授权文件",
+          "link": "/%E6%95%B0%E6%8D%AE%E5%BA%93/%E4%BA%BA%E5%A4%A7%E9%87%91%E4%BB%93Kingbase/%E4%BA%BA%E5%A4%A7%E9%87%91%E4%BB%93%E6%9B%BF%E6%8D%A2%E6%8E%88%E6%9D%83%E6%96%87%E4%BB%B6"
+        }
+      ]
+    },
+    {
+      "text": "图数据库",
+      "collapsed": true,
+      "items": [
+        {
+          "text": "neo4j部署",
+          "link": "/%E6%95%B0%E6%8D%AE%E5%BA%93/%E5%9B%BE%E6%95%B0%E6%8D%AE%E5%BA%93/neo4j%E9%83%A8%E7%BD%B2"
+        }
+      ]
+    },
+    {
+      "text": "常用SQL",
+      "collapsed": true,
+      "items": [
+        {
+          "text": "MySQL分区表",
+          "link": "/%E6%95%B0%E6%8D%AE%E5%BA%93/%E5%B8%B8%E7%94%A8SQL/MySQL%E5%88%86%E5%8C%BA%E8%A1%A8"
+        },
+        {
+          "text": "查询表占用大小",
+          "link": "/%E6%95%B0%E6%8D%AE%E5%BA%93/%E5%B8%B8%E7%94%A8SQL/%E6%9F%A5%E8%AF%A2%E8%A1%A8%E5%8D%A0%E7%94%A8%E5%A4%A7%E5%B0%8F"
+        }
+      ]
+    }
+  ],
+  "/日常文档/": [
+    {
+      "text": "IT资产管理Docker Compose 部署Snipe-it",
+      "link": "/%E6%97%A5%E5%B8%B8%E6%96%87%E6%A1%A3/IT%E8%B5%84%E4%BA%A7%E7%AE%A1%E7%90%86Docker%20Compose%20%E9%83%A8%E7%BD%B2Snipe-it"
+    },
+    {
+      "text": "MySQL巡检方案",
+      "link": "/%E6%97%A5%E5%B8%B8%E6%96%87%E6%A1%A3/MySQL%E5%B7%A1%E6%A3%80%E6%96%B9%E6%A1%88"
+    },
+    {
+      "text": "夜莺部署",
+      "link": "/%E6%97%A5%E5%B8%B8%E6%96%87%E6%A1%A3/%E5%A4%9C%E8%8E%BA%E9%83%A8%E7%BD%B2"
+    },
+    {
+      "text": "巡检方案报告",
+      "link": "/%E6%97%A5%E5%B8%B8%E6%96%87%E6%A1%A3/%E5%B7%A1%E6%A3%80%E6%96%B9%E6%A1%88%E6%8A%A5%E5%91%8A"
+    }
+  ],
+  "/等保问题与漏洞修复/": [
+    {
+      "text": "+i -i",
+      "link": "/%E7%AD%89%E4%BF%9D%E9%97%AE%E9%A2%98%E4%B8%8E%E6%BC%8F%E6%B4%9E%E4%BF%AE%E5%A4%8D/+i%20-i"
+    },
+    {
+      "text": "iptables进行端口防护",
+      "link": "/%E7%AD%89%E4%BF%9D%E9%97%AE%E9%A2%98%E4%B8%8E%E6%BC%8F%E6%B4%9E%E4%BF%AE%E5%A4%8D/iptables%E8%BF%9B%E8%A1%8C%E7%AB%AF%E5%8F%A3%E9%98%B2%E6%8A%A4"
+    },
+    {
+      "text": "Linux服务器OpenSSH版本升级-telnet备用通道",
+      "link": "/%E7%AD%89%E4%BF%9D%E9%97%AE%E9%A2%98%E4%B8%8E%E6%BC%8F%E6%B4%9E%E4%BF%AE%E5%A4%8D/Linux%E6%9C%8D%E5%8A%A1%E5%99%A8OpenSSH%E7%89%88%E6%9C%AC%E5%8D%87%E7%BA%A7-telnet%E5%A4%87%E7%94%A8%E9%80%9A%E9%81%93"
+    },
+    {
+      "text": "ssh版本升级-先启用telnet---9.7p1 without openssl",
+      "link": "/%E7%AD%89%E4%BF%9D%E9%97%AE%E9%A2%98%E4%B8%8E%E6%BC%8F%E6%B4%9E%E4%BF%AE%E5%A4%8D/ssh%E7%89%88%E6%9C%AC%E5%8D%87%E7%BA%A7-%E5%85%88%E5%90%AF%E7%94%A8telnet---9.7p1%20without%20openssl"
+    },
+    {
+      "text": "ssh重置失败次数",
+      "link": "/%E7%AD%89%E4%BF%9D%E9%97%AE%E9%A2%98%E4%B8%8E%E6%BC%8F%E6%B4%9E%E4%BF%AE%E5%A4%8D/ssh%E9%87%8D%E7%BD%AE%E5%A4%B1%E8%B4%A5%E6%AC%A1%E6%95%B0"
+    },
+    {
+      "text": "应付pg版本低漏洞",
+      "link": "/%E7%AD%89%E4%BF%9D%E9%97%AE%E9%A2%98%E4%B8%8E%E6%BC%8F%E6%B4%9E%E4%BF%AE%E5%A4%8D/%E5%BA%94%E4%BB%98pg%E7%89%88%E6%9C%AC%E4%BD%8E%E6%BC%8F%E6%B4%9E"
+    },
+    {
+      "text": "权限问题",
+      "collapsed": true,
+      "items": [
+        {
+          "text": "三权分立--只创建用户和组能应付",
+          "link": "/%E7%AD%89%E4%BF%9D%E9%97%AE%E9%A2%98%E4%B8%8E%E6%BC%8F%E6%B4%9E%E4%BF%AE%E5%A4%8D/%E6%9D%83%E9%99%90%E9%97%AE%E9%A2%98/%E4%B8%89%E6%9D%83%E5%88%86%E7%AB%8B--%E5%8F%AA%E5%88%9B%E5%BB%BA%E7%94%A8%E6%88%B7%E5%92%8C%E7%BB%84%E8%83%BD%E5%BA%94%E4%BB%98"
+        },
+        {
+          "text": "非交互式批量改密码--安全员 审计员 系统管理员三权分立",
+          "link": "/%E7%AD%89%E4%BF%9D%E9%97%AE%E9%A2%98%E4%B8%8E%E6%BC%8F%E6%B4%9E%E4%BF%AE%E5%A4%8D/%E6%9D%83%E9%99%90%E9%97%AE%E9%A2%98/%E9%9D%9E%E4%BA%A4%E4%BA%92%E5%BC%8F%E6%89%B9%E9%87%8F%E6%94%B9%E5%AF%86%E7%A0%81--%E5%AE%89%E5%85%A8%E5%91%98%20%E5%AE%A1%E8%AE%A1%E5%91%98%20%E7%B3%BB%E7%BB%9F%E7%AE%A1%E7%90%86%E5%91%98%E4%B8%89%E6%9D%83%E5%88%86%E7%AB%8B"
+        }
+      ]
+    },
+    {
+      "text": "记一次被挖矿",
+      "link": "/%E7%AD%89%E4%BF%9D%E9%97%AE%E9%A2%98%E4%B8%8E%E6%BC%8F%E6%B4%9E%E4%BF%AE%E5%A4%8D/%E8%AE%B0%E4%B8%80%E6%AC%A1%E8%A2%AB%E6%8C%96%E7%9F%BF"
+    }
+  ],
+  "/规范文档/": [
+    {
+      "text": "数据安全使用规范（数据库）",
+      "link": "/%E8%A7%84%E8%8C%83%E6%96%87%E6%A1%A3/%E6%95%B0%E6%8D%AE%E5%AE%89%E5%85%A8%E4%BD%BF%E7%94%A8%E8%A7%84%E8%8C%83%EF%BC%88%E6%95%B0%E6%8D%AE%E5%BA%93%EF%BC%89"
+    },
+    {
+      "text": "项目发版流程",
+      "link": "/%E8%A7%84%E8%8C%83%E6%96%87%E6%A1%A3/%E9%A1%B9%E7%9B%AE%E5%8F%91%E7%89%88%E6%B5%81%E7%A8%8B"
+    }
+  ],
+  "/运维/": [
+    {
+      "text": "CICD",
+      "collapsed": true,
+      "items": [
+        {
+          "text": "GitLab-CICD",
+          "collapsed": true,
+          "items": [
+            {
+              "text": "CICD相关问题",
+              "link": "/%E8%BF%90%E7%BB%B4/CICD/GitLab-CICD/CICD%E7%9B%B8%E5%85%B3%E9%97%AE%E9%A2%98"
+            },
+            {
+              "text": "GitLab Pipeline实践",
+              "link": "/%E8%BF%90%E7%BB%B4/CICD/GitLab-CICD/GitLab%20Pipeline%E5%AE%9E%E8%B7%B5"
+            },
+            {
+              "text": "gitlab-runner安装",
+              "link": "/%E8%BF%90%E7%BB%B4/CICD/GitLab-CICD/gitlab-runner%E5%AE%89%E8%A3%85"
+            }
+          ]
+        },
+        {
+          "text": "Jenkins相关",
+          "collapsed": true,
+          "items": [
+            {
+              "text": "Jenkins",
+              "link": "/%E8%BF%90%E7%BB%B4/CICD/Jenkins%E7%9B%B8%E5%85%B3/Jenkins"
+            },
+            {
+              "text": "Maven",
+              "link": "/%E8%BF%90%E7%BB%B4/CICD/Jenkins%E7%9B%B8%E5%85%B3/Maven"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "text": "docker",
+      "collapsed": true,
+      "items": [
+        {
+          "text": "Centos8部署docker",
+          "link": "/%E8%BF%90%E7%BB%B4/docker/Centos8%E9%83%A8%E7%BD%B2docker"
+        },
+        {
+          "text": "docker运行java程序 kafka zookeeper中间件",
+          "link": "/%E8%BF%90%E7%BB%B4/docker/docker%E8%BF%90%E8%A1%8Cjava%E7%A8%8B%E5%BA%8F%20kafka%20zookeeper%E4%B8%AD%E9%97%B4%E4%BB%B6"
+        },
+        {
+          "text": "tengine",
+          "link": "/%E8%BF%90%E7%BB%B4/docker/tengine"
+        },
+        {
+          "text": "批量打包镜像 批量 load",
+          "link": "/%E8%BF%90%E7%BB%B4/docker/%E6%89%B9%E9%87%8F%E6%89%93%E5%8C%85%E9%95%9C%E5%83%8F%20%E6%89%B9%E9%87%8F%20load"
+        }
+      ]
+    },
+    {
+      "text": "k8s",
+      "collapsed": true,
+      "items": [
+        {
+          "text": "学习资料",
+          "collapsed": true,
+          "items": [
+            {
+              "text": "ConfigMap",
+              "collapsed": true,
+              "items": [
+                {
+                  "text": "pod基于env环境变量和基于存储卷引入configMap资源",
+                  "link": "/%E8%BF%90%E7%BB%B4/k8s/%E5%AD%A6%E4%B9%A0%E8%B5%84%E6%96%99/ConfigMap/pod%E5%9F%BA%E4%BA%8Eenv%E7%8E%AF%E5%A2%83%E5%8F%98%E9%87%8F%E5%92%8C%E5%9F%BA%E4%BA%8E%E5%AD%98%E5%82%A8%E5%8D%B7%E5%BC%95%E5%85%A5configMap%E8%B5%84%E6%BA%90"
+                },
+                {
+                  "text": "将nginx的配置文件使用cm资源创建并挂载",
+                  "link": "/%E8%BF%90%E7%BB%B4/k8s/%E5%AD%A6%E4%B9%A0%E8%B5%84%E6%96%99/ConfigMap/%E5%B0%86nginx%E7%9A%84%E9%85%8D%E7%BD%AE%E6%96%87%E4%BB%B6%E4%BD%BF%E7%94%A8cm%E8%B5%84%E6%BA%90%E5%88%9B%E5%BB%BA%E5%B9%B6%E6%8C%82%E8%BD%BD"
+                }
+              ]
+            },
+            {
+              "text": "harbor仓库",
+              "collapsed": true,
+              "items": [
+                {
+                  "text": "部署harbor https认证",
+                  "link": "/%E8%BF%90%E7%BB%B4/k8s/%E5%AD%A6%E4%B9%A0%E8%B5%84%E6%96%99/harbor%E4%BB%93%E5%BA%93/%E9%83%A8%E7%BD%B2harbor%20https%E8%AE%A4%E8%AF%81"
+                }
+              ]
+            },
+            {
+              "text": "k8s资源清单",
+              "collapsed": true,
+              "items": [
+                {
+                  "text": "小案例",
+                  "link": "/%E8%BF%90%E7%BB%B4/k8s/%E5%AD%A6%E4%B9%A0%E8%B5%84%E6%96%99/k8s%E8%B5%84%E6%BA%90%E6%B8%85%E5%8D%95/%E5%B0%8F%E6%A1%88%E4%BE%8B"
+                },
+                {
+                  "text": "资源清单",
+                  "link": "/%E8%BF%90%E7%BB%B4/k8s/%E5%AD%A6%E4%B9%A0%E8%B5%84%E6%96%99/k8s%E8%B5%84%E6%BA%90%E6%B8%85%E5%8D%95/%E8%B5%84%E6%BA%90%E6%B8%85%E5%8D%95"
+                }
+              ]
+            },
+            {
+              "text": "K8S部署前所有节点环境准备",
+              "link": "/%E8%BF%90%E7%BB%B4/k8s/%E5%AD%A6%E4%B9%A0%E8%B5%84%E6%96%99/K8S%E9%83%A8%E7%BD%B2%E5%89%8D%E6%89%80%E6%9C%89%E8%8A%82%E7%82%B9%E7%8E%AF%E5%A2%83%E5%87%86%E5%A4%87"
+            },
+            {
+              "text": "Pod容器",
+              "collapsed": true,
+              "items": [
+                {
+                  "text": "pod生命周期",
+                  "link": "/%E8%BF%90%E7%BB%B4/k8s/%E5%AD%A6%E4%B9%A0%E8%B5%84%E6%96%99/Pod%E5%AE%B9%E5%99%A8/pod%E7%94%9F%E5%91%BD%E5%91%A8%E6%9C%9F"
+                },
+                {
+                  "text": "Pod驱逐及K8S节点下线：",
+                  "link": "/%E8%BF%90%E7%BB%B4/k8s/%E5%AD%A6%E4%B9%A0%E8%B5%84%E6%96%99/Pod%E5%AE%B9%E5%99%A8/Pod%E9%A9%B1%E9%80%90%E5%8F%8AK8S%E8%8A%82%E7%82%B9%E4%B8%8B%E7%BA%BF%EF%BC%9A"
+                },
+                {
+                  "text": "StatefulSet控制器",
+                  "link": "/%E8%BF%90%E7%BB%B4/k8s/%E5%AD%A6%E4%B9%A0%E8%B5%84%E6%96%99/Pod%E5%AE%B9%E5%99%A8/StatefulSet%E6%8E%A7%E5%88%B6%E5%99%A8"
+                },
+                {
+                  "text": "初始化容器-initContainers",
+                  "link": "/%E8%BF%90%E7%BB%B4/k8s/%E5%AD%A6%E4%B9%A0%E8%B5%84%E6%96%99/Pod%E5%AE%B9%E5%99%A8/%E5%88%9D%E5%A7%8B%E5%8C%96%E5%AE%B9%E5%99%A8-initContainers"
+                },
+                {
+                  "text": "安全上下文securityContext",
+                  "link": "/%E8%BF%90%E7%BB%B4/k8s/%E5%AD%A6%E4%B9%A0%E8%B5%84%E6%96%99/Pod%E5%AE%B9%E5%99%A8/%E5%AE%89%E5%85%A8%E4%B8%8A%E4%B8%8B%E6%96%87securityContext"
+                },
+                {
+                  "text": "静态pod-了解(基本不用)",
+                  "link": "/%E8%BF%90%E7%BB%B4/k8s/%E5%AD%A6%E4%B9%A0%E8%B5%84%E6%96%99/Pod%E5%AE%B9%E5%99%A8/%E9%9D%99%E6%80%81pod-%E4%BA%86%E8%A7%A3(%E5%9F%BA%E6%9C%AC%E4%B8%8D%E7%94%A8)"
+                }
+              ]
+            },
+            {
+              "text": "secret",
+              "collapsed": true,
+              "items": [
+                {
+                  "text": "habor的secret创建直接创建资源清单 转至元数据结尾",
+                  "link": "/%E8%BF%90%E7%BB%B4/k8s/%E5%AD%A6%E4%B9%A0%E8%B5%84%E6%96%99/secret/habor%E7%9A%84secret%E5%88%9B%E5%BB%BA%E7%9B%B4%E6%8E%A5%E5%88%9B%E5%BB%BA%E8%B5%84%E6%BA%90%E6%B8%85%E5%8D%95%20%E8%BD%AC%E8%87%B3%E5%85%83%E6%95%B0%E6%8D%AE%E7%BB%93%E5%B0%BE"
+                },
+                {
+                  "text": "Pod基于env引用secret资源案例",
+                  "link": "/%E8%BF%90%E7%BB%B4/k8s/%E5%AD%A6%E4%B9%A0%E8%B5%84%E6%96%99/secret/Pod%E5%9F%BA%E4%BA%8Eenv%E5%BC%95%E7%94%A8secret%E8%B5%84%E6%BA%90%E6%A1%88%E4%BE%8B"
+                },
+                {
+                  "text": "Pod基于存储卷引用secret资源案例",
+                  "link": "/%E8%BF%90%E7%BB%B4/k8s/%E5%AD%A6%E4%B9%A0%E8%B5%84%E6%96%99/secret/Pod%E5%9F%BA%E4%BA%8E%E5%AD%98%E5%82%A8%E5%8D%B7%E5%BC%95%E7%94%A8secret%E8%B5%84%E6%BA%90%E6%A1%88%E4%BE%8B"
+                },
+                {
+                  "text": "secret资源增删改查",
+                  "link": "/%E8%BF%90%E7%BB%B4/k8s/%E5%AD%A6%E4%B9%A0%E8%B5%84%E6%96%99/secret/secret%E8%B5%84%E6%BA%90%E5%A2%9E%E5%88%A0%E6%94%B9%E6%9F%A5"
+                },
+                {
+                  "text": "基于命令行的方式创建harbor认证信息",
+                  "link": "/%E8%BF%90%E7%BB%B4/k8s/%E5%AD%A6%E4%B9%A0%E8%B5%84%E6%96%99/secret/%E5%9F%BA%E4%BA%8E%E5%91%BD%E4%BB%A4%E8%A1%8C%E7%9A%84%E6%96%B9%E5%BC%8F%E5%88%9B%E5%BB%BAharbor%E8%AE%A4%E8%AF%81%E4%BF%A1%E6%81%AF"
+                }
+              ]
+            },
+            {
+              "text": "service-svc",
+              "collapsed": true,
+              "items": [
+                {
+                  "text": "clausterIP",
+                  "link": "/%E8%BF%90%E7%BB%B4/k8s/%E5%AD%A6%E4%B9%A0%E8%B5%84%E6%96%99/service-svc/clausterIP"
+                },
+                {
+                  "text": "修改api-server支持的NodePort端口映射范围",
+                  "link": "/%E8%BF%90%E7%BB%B4/k8s/%E5%AD%A6%E4%B9%A0%E8%B5%84%E6%96%99/service-svc/%E4%BF%AE%E6%94%B9api-server%E6%94%AF%E6%8C%81%E7%9A%84NodePort%E7%AB%AF%E5%8F%A3%E6%98%A0%E5%B0%84%E8%8C%83%E5%9B%B4"
+                }
+              ]
+            },
+            {
+              "text": "单点集群",
+              "link": "/%E8%BF%90%E7%BB%B4/k8s/%E5%AD%A6%E4%B9%A0%E8%B5%84%E6%96%99/%E5%8D%95%E7%82%B9%E9%9B%86%E7%BE%A4"
+            },
+            {
+              "text": "存储pv,pvc,sc",
+              "collapsed": true,
+              "items": [
+                {
+                  "text": "删除pvc验证pv的回收策略",
+                  "link": "/%E8%BF%90%E7%BB%B4/k8s/%E5%AD%A6%E4%B9%A0%E8%B5%84%E6%96%99/%E5%AD%98%E5%82%A8pv,pvc,sc/%E5%88%A0%E9%99%A4pvc%E9%AA%8C%E8%AF%81pv%E7%9A%84%E5%9B%9E%E6%94%B6%E7%AD%96%E7%95%A5"
+                },
+                {
+                  "text": "动态存储sc",
+                  "link": "/%E8%BF%90%E7%BB%B4/k8s/%E5%AD%A6%E4%B9%A0%E8%B5%84%E6%96%99/%E5%AD%98%E5%82%A8pv,pvc,sc/%E5%8A%A8%E6%80%81%E5%AD%98%E5%82%A8sc"
+                },
+                {
+                  "text": "存储图解",
+                  "link": "/%E8%BF%90%E7%BB%B4/k8s/%E5%AD%A6%E4%B9%A0%E8%B5%84%E6%96%99/%E5%AD%98%E5%82%A8pv,pvc,sc/%E5%AD%98%E5%82%A8%E5%9B%BE%E8%A7%A3"
+                },
+                {
+                  "text": "手动创建pv pvc",
+                  "link": "/%E8%BF%90%E7%BB%B4/k8s/%E5%AD%A6%E4%B9%A0%E8%B5%84%E6%96%99/%E5%AD%98%E5%82%A8pv,pvc,sc/%E6%89%8B%E5%8A%A8%E5%88%9B%E5%BB%BApv%20pvc"
+                }
+              ]
+            },
+            {
+              "text": "弹性伸缩",
+              "collapsed": true,
+              "items": [
+                {
+                  "text": "hpa水平伸缩",
+                  "link": "/%E8%BF%90%E7%BB%B4/k8s/%E5%AD%A6%E4%B9%A0%E8%B5%84%E6%96%99/%E5%BC%B9%E6%80%A7%E4%BC%B8%E7%BC%A9/hpa%E6%B0%B4%E5%B9%B3%E4%BC%B8%E7%BC%A9"
+                },
+                {
+                  "text": "metrics-server",
+                  "link": "/%E8%BF%90%E7%BB%B4/k8s/%E5%AD%A6%E4%B9%A0%E8%B5%84%E6%96%99/%E5%BC%B9%E6%80%A7%E4%BC%B8%E7%BC%A9/metrics-server"
+                }
+              ]
+            },
+            {
+              "text": "探针probe",
+              "collapsed": true,
+              "items": [
+                {
+                  "text": "livenessProbe-存活探针",
+                  "collapsed": true,
+                  "items": [
+                    {
+                      "text": "livenessProbe-exec",
+                      "link": "/%E8%BF%90%E7%BB%B4/k8s/%E5%AD%A6%E4%B9%A0%E8%B5%84%E6%96%99/%E6%8E%A2%E9%92%88probe/livenessProbe-%E5%AD%98%E6%B4%BB%E6%8E%A2%E9%92%88/livenessProbe-exec"
+                    },
+                    {
+                      "text": "livenessProbe-httpGet",
+                      "link": "/%E8%BF%90%E7%BB%B4/k8s/%E5%AD%A6%E4%B9%A0%E8%B5%84%E6%96%99/%E6%8E%A2%E9%92%88probe/livenessProbe-%E5%AD%98%E6%B4%BB%E6%8E%A2%E9%92%88/livenessProbe-httpGet"
+                    },
+                    {
+                      "text": "livenessProbe-tcpSocket",
+                      "link": "/%E8%BF%90%E7%BB%B4/k8s/%E5%AD%A6%E4%B9%A0%E8%B5%84%E6%96%99/%E6%8E%A2%E9%92%88probe/livenessProbe-%E5%AD%98%E6%B4%BB%E6%8E%A2%E9%92%88/livenessProbe-tcpSocket"
+                    }
+                  ]
+                },
+                {
+                  "text": "readinessProbe-可用性检查",
+                  "collapsed": true,
+                  "items": [
+                    {
+                      "text": "readinessProbe-exec",
+                      "link": "/%E8%BF%90%E7%BB%B4/k8s/%E5%AD%A6%E4%B9%A0%E8%B5%84%E6%96%99/%E6%8E%A2%E9%92%88probe/readinessProbe-%E5%8F%AF%E7%94%A8%E6%80%A7%E6%A3%80%E6%9F%A5/readinessProbe-exec"
+                    },
+                    {
+                      "text": "readinessProbe-httpGet",
+                      "link": "/%E8%BF%90%E7%BB%B4/k8s/%E5%AD%A6%E4%B9%A0%E8%B5%84%E6%96%99/%E6%8E%A2%E9%92%88probe/readinessProbe-%E5%8F%AF%E7%94%A8%E6%80%A7%E6%A3%80%E6%9F%A5/readinessProbe-httpGet"
+                    },
+                    {
+                      "text": "readinessProbe-tcpSocket",
+                      "link": "/%E8%BF%90%E7%BB%B4/k8s/%E5%AD%A6%E4%B9%A0%E8%B5%84%E6%96%99/%E6%8E%A2%E9%92%88probe/readinessProbe-%E5%8F%AF%E7%94%A8%E6%80%A7%E6%A3%80%E6%9F%A5/readinessProbe-tcpSocket"
+                    },
+                    {
+                      "text": "简介",
+                      "link": "/%E8%BF%90%E7%BB%B4/k8s/%E5%AD%A6%E4%B9%A0%E8%B5%84%E6%96%99/%E6%8E%A2%E9%92%88probe/readinessProbe-%E5%8F%AF%E7%94%A8%E6%80%A7%E6%A3%80%E6%9F%A5/%E7%AE%80%E4%BB%8B"
+                    }
+                  ]
+                },
+                {
+                  "text": "startupProbe启动探针-优先级最高",
+                  "link": "/%E8%BF%90%E7%BB%B4/k8s/%E5%AD%A6%E4%B9%A0%E8%B5%84%E6%96%99/%E6%8E%A2%E9%92%88probe/startupProbe%E5%90%AF%E5%8A%A8%E6%8E%A2%E9%92%88-%E4%BC%98%E5%85%88%E7%BA%A7%E6%9C%80%E9%AB%98"
+                },
+                {
+                  "text": "简介",
+                  "link": "/%E8%BF%90%E7%BB%B4/k8s/%E5%AD%A6%E4%B9%A0%E8%B5%84%E6%96%99/%E6%8E%A2%E9%92%88probe/%E7%AE%80%E4%BB%8B"
+                }
+              ]
+            },
+            {
+              "text": "控制器",
+              "collapsed": true,
+              "items": [
+                {
+                  "text": "DaemonSet控制器",
+                  "link": "/%E8%BF%90%E7%BB%B4/k8s/%E5%AD%A6%E4%B9%A0%E8%B5%84%E6%96%99/%E6%8E%A7%E5%88%B6%E5%99%A8/DaemonSet%E6%8E%A7%E5%88%B6%E5%99%A8"
+                },
+                {
+                  "text": "Deployment控制器",
+                  "collapsed": true,
+                  "items": [
+                    {
+                      "text": "deployment",
+                      "link": "/%E8%BF%90%E7%BB%B4/k8s/%E5%AD%A6%E4%B9%A0%E8%B5%84%E6%96%99/%E6%8E%A7%E5%88%B6%E5%99%A8/Deployment%E6%8E%A7%E5%88%B6%E5%99%A8/deployment"
+                    },
+                    {
+                      "text": "deployment部署redis",
+                      "link": "/%E8%BF%90%E7%BB%B4/k8s/%E5%AD%A6%E4%B9%A0%E8%B5%84%E6%96%99/%E6%8E%A7%E5%88%B6%E5%99%A8/Deployment%E6%8E%A7%E5%88%B6%E5%99%A8/deployment%E9%83%A8%E7%BD%B2redis"
+                    },
+                    {
+                      "text": "升级策略",
+                      "link": "/%E8%BF%90%E7%BB%B4/k8s/%E5%AD%A6%E4%B9%A0%E8%B5%84%E6%96%99/%E6%8E%A7%E5%88%B6%E5%99%A8/Deployment%E6%8E%A7%E5%88%B6%E5%99%A8/%E5%8D%87%E7%BA%A7%E7%AD%96%E7%95%A5"
+                    }
+                  ]
+                },
+                {
+                  "text": "K8S几种控制器的区别",
+                  "link": "/%E8%BF%90%E7%BB%B4/k8s/%E5%AD%A6%E4%B9%A0%E8%B5%84%E6%96%99/%E6%8E%A7%E5%88%B6%E5%99%A8/K8S%E5%87%A0%E7%A7%8D%E6%8E%A7%E5%88%B6%E5%99%A8%E7%9A%84%E5%8C%BA%E5%88%AB"
+                },
+                {
+                  "text": "rc控制器-1.23版本已不支持滚动更新",
+                  "link": "/%E8%BF%90%E7%BB%B4/k8s/%E5%AD%A6%E4%B9%A0%E8%B5%84%E6%96%99/%E6%8E%A7%E5%88%B6%E5%99%A8/rc%E6%8E%A7%E5%88%B6%E5%99%A8-1.23%E7%89%88%E6%9C%AC%E5%B7%B2%E4%B8%8D%E6%94%AF%E6%8C%81%E6%BB%9A%E5%8A%A8%E6%9B%B4%E6%96%B0"
+                },
+                {
+                  "text": "rs控制器",
+                  "link": "/%E8%BF%90%E7%BB%B4/k8s/%E5%AD%A6%E4%B9%A0%E8%B5%84%E6%96%99/%E6%8E%A7%E5%88%B6%E5%99%A8/rs%E6%8E%A7%E5%88%B6%E5%99%A8"
+                }
+              ]
+            },
+            {
+              "text": "数据持久化",
+              "collapsed": true,
+              "items": [
+                {
+                  "text": "必看",
+                  "link": "/%E8%BF%90%E7%BB%B4/k8s/%E5%AD%A6%E4%B9%A0%E8%B5%84%E6%96%99/%E6%95%B0%E6%8D%AE%E6%8C%81%E4%B9%85%E5%8C%96/%E5%BF%85%E7%9C%8B"
+                },
+                {
+                  "text": "资源限制",
+                  "link": "/%E8%BF%90%E7%BB%B4/k8s/%E5%AD%A6%E4%B9%A0%E8%B5%84%E6%96%99/%E6%95%B0%E6%8D%AE%E6%8C%81%E4%B9%85%E5%8C%96/%E8%B5%84%E6%BA%90%E9%99%90%E5%88%B6"
+                }
+              ]
+            },
+            {
+              "text": "标签管理labels",
+              "collapsed": true,
+              "items": [
+                {
+                  "text": "cm",
+                  "link": "/%E8%BF%90%E7%BB%B4/k8s/%E5%AD%A6%E4%B9%A0%E8%B5%84%E6%96%99/%E6%A0%87%E7%AD%BE%E7%AE%A1%E7%90%86labels/cm"
+                },
+                {
+                  "text": "pods",
+                  "link": "/%E8%BF%90%E7%BB%B4/k8s/%E5%AD%A6%E4%B9%A0%E8%B5%84%E6%96%99/%E6%A0%87%E7%AD%BE%E7%AE%A1%E7%90%86labels/pods"
+                },
+                {
+                  "text": "必看",
+                  "link": "/%E8%BF%90%E7%BB%B4/k8s/%E5%AD%A6%E4%B9%A0%E8%B5%84%E6%96%99/%E6%A0%87%E7%AD%BE%E7%AE%A1%E7%90%86labels/%E5%BF%85%E7%9C%8B"
+                }
+              ]
+            },
+            {
+              "text": "污点",
+              "collapsed": true,
+              "items": [
+                {
+                  "text": "Pod污点容忍",
+                  "link": "/%E8%BF%90%E7%BB%B4/k8s/%E5%AD%A6%E4%B9%A0%E8%B5%84%E6%96%99/%E6%B1%A1%E7%82%B9/Pod%E6%B1%A1%E7%82%B9%E5%AE%B9%E5%BF%8D"
+                },
+                {
+                  "text": "必看",
+                  "link": "/%E8%BF%90%E7%BB%B4/k8s/%E5%AD%A6%E4%B9%A0%E8%B5%84%E6%96%99/%E6%B1%A1%E7%82%B9/%E5%BF%85%E7%9C%8B"
+                },
+                {
+                  "text": "节点选择器",
+                  "link": "/%E8%BF%90%E7%BB%B4/k8s/%E5%AD%A6%E4%B9%A0%E8%B5%84%E6%96%99/%E6%B1%A1%E7%82%B9/%E8%8A%82%E7%82%B9%E9%80%89%E6%8B%A9%E5%99%A8"
+                },
+                {
+                  "text": "驱逐节点pod，并设置污点",
+                  "link": "/%E8%BF%90%E7%BB%B4/k8s/%E5%AD%A6%E4%B9%A0%E8%B5%84%E6%96%99/%E6%B1%A1%E7%82%B9/%E9%A9%B1%E9%80%90%E8%8A%82%E7%82%B9pod%EF%BC%8C%E5%B9%B6%E8%AE%BE%E7%BD%AE%E6%B1%A1%E7%82%B9"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "text": "Linux",
+      "collapsed": true,
+      "items": [
+        {
+          "text": "PHP",
+          "collapsed": true,
+          "items": [
+            {
+              "text": "php-5.4.29+mysql5.6+redis6.2+nginx1.26.1",
+              "link": "/%E8%BF%90%E7%BB%B4/Linux/PHP/php-5.4.29+mysql5.6+redis6.2+nginx1.26.1"
+            },
+            {
+              "text": "php-7.4.33+mysql8.0+redis6.2+nginx1.26.1",
+              "link": "/%E8%BF%90%E7%BB%B4/Linux/PHP/php-7.4.33+mysql8.0+redis6.2+nginx1.26.1"
+            },
+            {
+              "text": "php-debian：7.4.30",
+              "link": "/%E8%BF%90%E7%BB%B4/Linux/PHP/php-debian%EF%BC%9A7.4.30"
+            }
+          ]
+        },
+        {
+          "text": "Rocky",
+          "link": "/%E8%BF%90%E7%BB%B4/Linux/Rocky"
+        },
+        {
+          "text": "RPM",
+          "collapsed": true,
+          "items": [
+            {
+              "text": "Jdk1.8",
+              "link": "/%E8%BF%90%E7%BB%B4/Linux/RPM/Jdk1.8"
+            },
+            {
+              "text": "JDK21",
+              "link": "/%E8%BF%90%E7%BB%B4/Linux/RPM/JDK21"
+            },
+            {
+              "text": "Tcpdump抓包工具",
+              "link": "/%E8%BF%90%E7%BB%B4/Linux/RPM/Tcpdump%E6%8A%93%E5%8C%85%E5%B7%A5%E5%85%B7"
+            },
+            {
+              "text": "离线基础安装包",
+              "link": "/%E8%BF%90%E7%BB%B4/Linux/RPM/%E7%A6%BB%E7%BA%BF%E5%9F%BA%E7%A1%80%E5%AE%89%E8%A3%85%E5%8C%85"
+            }
+          ]
+        },
+        {
+          "text": "service模板",
+          "collapsed": true,
+          "items": [
+            {
+              "text": "定时重启jar包",
+              "link": "/%E8%BF%90%E7%BB%B4/Linux/service%E6%A8%A1%E6%9D%BF/%E5%AE%9A%E6%97%B6%E9%87%8D%E5%90%AFjar%E5%8C%85"
+            },
+            {
+              "text": "对service文件记录日志",
+              "link": "/%E8%BF%90%E7%BB%B4/Linux/service%E6%A8%A1%E6%9D%BF/%E5%AF%B9service%E6%96%87%E4%BB%B6%E8%AE%B0%E5%BD%95%E6%97%A5%E5%BF%97"
+            }
+          ]
+        },
+        {
+          "text": "Shell",
+          "link": "/%E8%BF%90%E7%BB%B4/Linux/Shell"
+        },
+        {
+          "text": "中间件",
+          "collapsed": true,
+          "items": [
+            {
+              "text": "Es",
+              "collapsed": true,
+              "items": [
+                {
+                  "text": "Elasticsearch",
+                  "collapsed": true,
+                  "items": [
+                    {
+                      "text": "es数据对调",
+                      "link": "/%E8%BF%90%E7%BB%B4/Linux/%E4%B8%AD%E9%97%B4%E4%BB%B6/Es/Elasticsearch/es%E6%95%B0%E6%8D%AE%E5%AF%B9%E8%B0%83"
+                    },
+                    {
+                      "text": "二进制部署elasticsearch集群",
+                      "link": "/%E8%BF%90%E7%BB%B4/Linux/%E4%B8%AD%E9%97%B4%E4%BB%B6/Es/Elasticsearch/%E4%BA%8C%E8%BF%9B%E5%88%B6%E9%83%A8%E7%BD%B2elasticsearch%E9%9B%86%E7%BE%A4"
+                    },
+                    {
+                      "text": "常用命令",
+                      "link": "/%E8%BF%90%E7%BB%B4/Linux/%E4%B8%AD%E9%97%B4%E4%BB%B6/Es/Elasticsearch/%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4"
+                    }
+                  ]
+                },
+                {
+                  "text": "es相关命令",
+                  "link": "/%E8%BF%90%E7%BB%B4/Linux/%E4%B8%AD%E9%97%B4%E4%BB%B6/Es/es%E7%9B%B8%E5%85%B3%E5%91%BD%E4%BB%A4"
+                }
+              ]
+            },
+            {
+              "text": "Kafka",
+              "collapsed": true,
+              "items": [
+                {
+                  "text": "kafka不消费问题--此问题单节点可能会出现-路径有问题仅参考配置 转至元数据结尾",
+                  "link": "/%E8%BF%90%E7%BB%B4/Linux/%E4%B8%AD%E9%97%B4%E4%BB%B6/Kafka/kafka%E4%B8%8D%E6%B6%88%E8%B4%B9%E9%97%AE%E9%A2%98--%E6%AD%A4%E9%97%AE%E9%A2%98%E5%8D%95%E8%8A%82%E7%82%B9%E5%8F%AF%E8%83%BD%E4%BC%9A%E5%87%BA%E7%8E%B0-%E8%B7%AF%E5%BE%84%E6%9C%89%E9%97%AE%E9%A2%98%E4%BB%85%E5%8F%82%E8%80%83%E9%85%8D%E7%BD%AE%20%E8%BD%AC%E8%87%B3%E5%85%83%E6%95%B0%E6%8D%AE%E7%BB%93%E5%B0%BE"
+                },
+                {
+                  "text": "kafka安装手册",
+                  "link": "/%E8%BF%90%E7%BB%B4/Linux/%E4%B8%AD%E9%97%B4%E4%BB%B6/Kafka/kafka%E5%AE%89%E8%A3%85%E6%89%8B%E5%86%8C"
+                },
+                {
+                  "text": "命令",
+                  "link": "/%E8%BF%90%E7%BB%B4/Linux/%E4%B8%AD%E9%97%B4%E4%BB%B6/Kafka/%E5%91%BD%E4%BB%A4"
+                },
+                {
+                  "text": "部署Kafka集群",
+                  "link": "/%E8%BF%90%E7%BB%B4/Linux/%E4%B8%AD%E9%97%B4%E4%BB%B6/Kafka/%E9%83%A8%E7%BD%B2Kafka%E9%9B%86%E7%BE%A4"
+                }
+              ]
+            },
+            {
+              "text": "Nacos",
+              "collapsed": true,
+              "items": [
+                {
+                  "text": "Nacos-Nginx负载配置",
+                  "link": "/%E8%BF%90%E7%BB%B4/Linux/%E4%B8%AD%E9%97%B4%E4%BB%B6/Nacos/Nacos-Nginx%E8%B4%9F%E8%BD%BD%E9%85%8D%E7%BD%AE"
+                }
+              ]
+            },
+            {
+              "text": "Nexus",
+              "collapsed": true,
+              "items": [
+                {
+                  "text": "部署",
+                  "link": "/%E8%BF%90%E7%BB%B4/Linux/%E4%B8%AD%E9%97%B4%E4%BB%B6/Nexus/%E9%83%A8%E7%BD%B2"
+                }
+              ]
+            },
+            {
+              "text": "Nginx",
+              "collapsed": true,
+              "items": [
+                {
+                  "text": "https模板",
+                  "link": "/%E8%BF%90%E7%BB%B4/Linux/%E4%B8%AD%E9%97%B4%E4%BB%B6/Nginx/https%E6%A8%A1%E6%9D%BF"
+                },
+                {
+                  "text": "nginx版本升级-1.22.1 ssl",
+                  "link": "/%E8%BF%90%E7%BB%B4/Linux/%E4%B8%AD%E9%97%B4%E4%BB%B6/Nginx/nginx%E7%89%88%E6%9C%AC%E5%8D%87%E7%BA%A7-1.22.1%20ssl"
+                },
+                {
+                  "text": "反向代理",
+                  "link": "/%E8%BF%90%E7%BB%B4/Linux/%E4%B8%AD%E9%97%B4%E4%BB%B6/Nginx/%E5%8F%8D%E5%90%91%E4%BB%A3%E7%90%86"
+                },
+                {
+                  "text": "检测到目标URL存在http host头攻击漏洞",
+                  "link": "/%E8%BF%90%E7%BB%B4/Linux/%E4%B8%AD%E9%97%B4%E4%BB%B6/Nginx/%E6%A3%80%E6%B5%8B%E5%88%B0%E7%9B%AE%E6%A0%87URL%E5%AD%98%E5%9C%A8http%20host%E5%A4%B4%E6%94%BB%E5%87%BB%E6%BC%8F%E6%B4%9E"
+                }
+              ]
+            },
+            {
+              "text": "R",
+              "collapsed": true,
+              "items": [
+                {
+                  "text": "Operation001-Install",
+                  "link": "/%E8%BF%90%E7%BB%B4/Linux/%E4%B8%AD%E9%97%B4%E4%BB%B6/R/Operation001-Install"
+                },
+                {
+                  "text": "Operation002-HelloWorld",
+                  "link": "/%E8%BF%90%E7%BB%B4/Linux/%E4%B8%AD%E9%97%B4%E4%BB%B6/R/Operation002-HelloWorld"
+                },
+                {
+                  "text": "Operation003-WorkQueue",
+                  "link": "/%E8%BF%90%E7%BB%B4/Linux/%E4%B8%AD%E9%97%B4%E4%BB%B6/R/Operation003-WorkQueue"
+                },
+                {
+                  "text": "Operation004-PubSub",
+                  "link": "/%E8%BF%90%E7%BB%B4/Linux/%E4%B8%AD%E9%97%B4%E4%BB%B6/R/Operation004-PubSub"
+                },
+                {
+                  "text": "Operation005-Routing",
+                  "link": "/%E8%BF%90%E7%BB%B4/Linux/%E4%B8%AD%E9%97%B4%E4%BB%B6/R/Operation005-Routing"
+                },
+                {
+                  "text": "Operation006-Topics",
+                  "link": "/%E8%BF%90%E7%BB%B4/Linux/%E4%B8%AD%E9%97%B4%E4%BB%B6/R/Operation006-Topics"
+                },
+                {
+                  "text": "Operation007-SpringBoot",
+                  "link": "/%E8%BF%90%E7%BB%B4/Linux/%E4%B8%AD%E9%97%B4%E4%BB%B6/R/Operation007-SpringBoot"
+                },
+                {
+                  "text": "Operation008-Confirm01-A-Producer",
+                  "link": "/%E8%BF%90%E7%BB%B4/Linux/%E4%B8%AD%E9%97%B4%E4%BB%B6/R/Operation008-Confirm01-A-Producer"
+                },
+                {
+                  "text": "Operation008-Confirm01-B-BackupEx",
+                  "link": "/%E8%BF%90%E7%BB%B4/Linux/%E4%B8%AD%E9%97%B4%E4%BB%B6/R/Operation008-Confirm01-B-BackupEx"
+                },
+                {
+                  "text": "Operation008-Confirm02-Duration",
+                  "link": "/%E8%BF%90%E7%BB%B4/Linux/%E4%B8%AD%E9%97%B4%E4%BB%B6/R/Operation008-Confirm02-Duration"
+                },
+                {
+                  "text": "Operation008-Confirm03-Consumer",
+                  "link": "/%E8%BF%90%E7%BB%B4/Linux/%E4%B8%AD%E9%97%B4%E4%BB%B6/R/Operation008-Confirm03-Consumer"
+                },
+                {
+                  "text": "Operation009-Prefetch",
+                  "link": "/%E8%BF%90%E7%BB%B4/Linux/%E4%B8%AD%E9%97%B4%E4%BB%B6/R/Operation009-Prefetch"
+                },
+                {
+                  "text": "Operation010-MessageTimeout",
+                  "link": "/%E8%BF%90%E7%BB%B4/Linux/%E4%B8%AD%E9%97%B4%E4%BB%B6/R/Operation010-MessageTimeout"
+                },
+                {
+                  "text": "Operation011-DeadLetter",
+                  "link": "/%E8%BF%90%E7%BB%B4/Linux/%E4%B8%AD%E9%97%B4%E4%BB%B6/R/Operation011-DeadLetter"
+                },
+                {
+                  "text": "Operation012-DelayPlugin",
+                  "link": "/%E8%BF%90%E7%BB%B4/Linux/%E4%B8%AD%E9%97%B4%E4%BB%B6/R/Operation012-DelayPlugin"
+                },
+                {
+                  "text": "Operation013-Tx-Producer",
+                  "link": "/%E8%BF%90%E7%BB%B4/Linux/%E4%B8%AD%E9%97%B4%E4%BB%B6/R/Operation013-Tx-Producer"
+                },
+                {
+                  "text": "Operation014-LazyQueue",
+                  "link": "/%E8%BF%90%E7%BB%B4/Linux/%E4%B8%AD%E9%97%B4%E4%BB%B6/R/Operation014-LazyQueue"
+                },
+                {
+                  "text": "Operation015-PriorityQueue",
+                  "link": "/%E8%BF%90%E7%BB%B4/Linux/%E4%B8%AD%E9%97%B4%E4%BB%B6/R/Operation015-PriorityQueue"
+                },
+                {
+                  "text": "Operation016-Cluster",
+                  "link": "/%E8%BF%90%E7%BB%B4/Linux/%E4%B8%AD%E9%97%B4%E4%BB%B6/R/Operation016-Cluster"
+                },
+                {
+                  "text": "Operation017-Quorum",
+                  "link": "/%E8%BF%90%E7%BB%B4/Linux/%E4%B8%AD%E9%97%B4%E4%BB%B6/R/Operation017-Quorum"
+                },
+                {
+                  "text": "Operation018-Stream",
+                  "link": "/%E8%BF%90%E7%BB%B4/Linux/%E4%B8%AD%E9%97%B4%E4%BB%B6/R/Operation018-Stream"
+                },
+                {
+                  "text": "Operation019-Federation",
+                  "link": "/%E8%BF%90%E7%BB%B4/Linux/%E4%B8%AD%E9%97%B4%E4%BB%B6/R/Operation019-Federation"
+                },
+                {
+                  "text": "Operation020-Shovel",
+                  "link": "/%E8%BF%90%E7%BB%B4/Linux/%E4%B8%AD%E9%97%B4%E4%BB%B6/R/Operation020-Shovel"
+                }
+              ]
+            },
+            {
+              "text": "RabbitMQ",
+              "collapsed": true,
+              "items": [
+                {
+                  "text": "MQ集群搭建",
+                  "link": "/%E8%BF%90%E7%BB%B4/Linux/%E4%B8%AD%E9%97%B4%E4%BB%B6/RabbitMQ/MQ%E9%9B%86%E7%BE%A4%E6%90%AD%E5%BB%BA"
+                },
+                {
+                  "text": "二进制-RabbitMQ 4.1.0(Rocky9.5)",
+                  "link": "/%E8%BF%90%E7%BB%B4/Linux/%E4%B8%AD%E9%97%B4%E4%BB%B6/RabbitMQ/%E4%BA%8C%E8%BF%9B%E5%88%B6-RabbitMQ%204.1.0(Rocky9.5)"
+                },
+                {
+                  "text": "常用命令",
+                  "link": "/%E8%BF%90%E7%BB%B4/Linux/%E4%B8%AD%E9%97%B4%E4%BB%B6/RabbitMQ/%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4"
+                }
+              ]
+            },
+            {
+              "text": "Redis",
+              "collapsed": true,
+              "items": [
+                {
+                  "text": "redis源码",
+                  "link": "/%E8%BF%90%E7%BB%B4/Linux/%E4%B8%AD%E9%97%B4%E4%BB%B6/Redis/redis%E6%BA%90%E7%A0%81"
+                },
+                {
+                  "text": "redis配置文件-适配主从rocky从机修改masterauth",
+                  "link": "/%E8%BF%90%E7%BB%B4/Linux/%E4%B8%AD%E9%97%B4%E4%BB%B6/Redis/redis%E9%85%8D%E7%BD%AE%E6%96%87%E4%BB%B6-%E9%80%82%E9%85%8D%E4%B8%BB%E4%BB%8Erocky%E4%BB%8E%E6%9C%BA%E4%BF%AE%E6%94%B9masterauth"
+                },
+                {
+                  "text": "常用",
+                  "link": "/%E8%BF%90%E7%BB%B4/Linux/%E4%B8%AD%E9%97%B4%E4%BB%B6/Redis/%E5%B8%B8%E7%94%A8"
+                },
+                {
+                  "text": "离线部署",
+                  "link": "/%E8%BF%90%E7%BB%B4/Linux/%E4%B8%AD%E9%97%B4%E4%BB%B6/Redis/%E7%A6%BB%E7%BA%BF%E9%83%A8%E7%BD%B2"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "text": "国产化",
+          "collapsed": true,
+          "items": [
+            {
+              "text": "国产化系统",
+              "link": "/%E8%BF%90%E7%BB%B4/Linux/%E5%9B%BD%E4%BA%A7%E5%8C%96/%E5%9B%BD%E4%BA%A7%E5%8C%96%E7%B3%BB%E7%BB%9F"
+            }
+          ]
+        },
+        {
+          "text": "实时同步",
+          "collapsed": true,
+          "items": [
+            {
+              "text": "rsync+cwrsync windows定时同步linux",
+              "link": "/%E8%BF%90%E7%BB%B4/Linux/%E5%AE%9E%E6%97%B6%E5%90%8C%E6%AD%A5/rsync+cwrsync%20windows%E5%AE%9A%E6%97%B6%E5%90%8C%E6%AD%A5linux"
+            },
+            {
+              "text": "Rsync实时同步",
+              "link": "/%E8%BF%90%E7%BB%B4/Linux/%E5%AE%9E%E6%97%B6%E5%90%8C%E6%AD%A5/Rsync%E5%AE%9E%E6%97%B6%E5%90%8C%E6%AD%A5"
+            }
+          ]
+        },
+        {
+          "text": "时间同步",
+          "collapsed": true,
+          "items": [
+            {
+              "text": "chronyd 时间同步",
+              "link": "/%E8%BF%90%E7%BB%B4/Linux/%E6%97%B6%E9%97%B4%E5%90%8C%E6%AD%A5/chronyd%20%E6%97%B6%E9%97%B4%E5%90%8C%E6%AD%A5"
+            },
+            {
+              "text": "ntp",
+              "link": "/%E8%BF%90%E7%BB%B4/Linux/%E6%97%B6%E9%97%B4%E5%90%8C%E6%AD%A5/ntp"
+            }
+          ]
+        },
+        {
+          "text": "监控",
+          "collapsed": true,
+          "items": [
+            {
+              "text": "Zabbix",
+              "collapsed": true,
+              "items": [
+                {
+                  "text": "Rocky9安装zabbix-server zabbix-agent",
+                  "link": "/%E8%BF%90%E7%BB%B4/Linux/%E7%9B%91%E6%8E%A7/Zabbix/Rocky9%E5%AE%89%E8%A3%85zabbix-server%20zabbix-agent"
+                },
+                {
+                  "text": "Zabbix解决中文乱码替换字体",
+                  "link": "/%E8%BF%90%E7%BB%B4/Linux/%E7%9B%91%E6%8E%A7/Zabbix/Zabbix%E8%A7%A3%E5%86%B3%E4%B8%AD%E6%96%87%E4%B9%B1%E7%A0%81%E6%9B%BF%E6%8D%A2%E5%AD%97%E4%BD%93"
+                },
+                {
+                  "text": "自定义监控",
+                  "link": "/%E8%BF%90%E7%BB%B4/Linux/%E7%9B%91%E6%8E%A7/Zabbix/%E8%87%AA%E5%AE%9A%E4%B9%89%E7%9B%91%E6%8E%A7"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "text": "磁盘相关",
+          "collapsed": true,
+          "items": [
+            {
+              "text": "新加磁盘lvm扩容",
+              "link": "/%E8%BF%90%E7%BB%B4/Linux/%E7%A3%81%E7%9B%98%E7%9B%B8%E5%85%B3/%E6%96%B0%E5%8A%A0%E7%A3%81%E7%9B%98lvm%E6%89%A9%E5%AE%B9"
+            },
+            {
+              "text": "新加磁盘挂载2T以下",
+              "link": "/%E8%BF%90%E7%BB%B4/Linux/%E7%A3%81%E7%9B%98%E7%9B%B8%E5%85%B3/%E6%96%B0%E5%8A%A0%E7%A3%81%E7%9B%98%E6%8C%82%E8%BD%BD2T%E4%BB%A5%E4%B8%8B"
+            },
+            {
+              "text": "磁盘快速缩容-生成大文件 转至元数据结尾",
+              "link": "/%E8%BF%90%E7%BB%B4/Linux/%E7%A3%81%E7%9B%98%E7%9B%B8%E5%85%B3/%E7%A3%81%E7%9B%98%E5%BF%AB%E9%80%9F%E7%BC%A9%E5%AE%B9-%E7%94%9F%E6%88%90%E5%A4%A7%E6%96%87%E4%BB%B6%20%E8%BD%AC%E8%87%B3%E5%85%83%E6%95%B0%E6%8D%AE%E7%BB%93%E5%B0%BE"
+            }
+          ]
+        },
+        {
+          "text": "系统调优",
+          "collapsed": true,
+          "items": [
+            {
+              "text": "TCP连接优化",
+              "link": "/%E8%BF%90%E7%BB%B4/Linux/%E7%B3%BB%E7%BB%9F%E8%B0%83%E4%BC%98/TCP%E8%BF%9E%E6%8E%A5%E4%BC%98%E5%8C%96"
+            },
+            {
+              "text": "清空文件内容",
+              "link": "/%E8%BF%90%E7%BB%B4/Linux/%E7%B3%BB%E7%BB%9F%E8%B0%83%E4%BC%98/%E6%B8%85%E7%A9%BA%E6%96%87%E4%BB%B6%E5%86%85%E5%AE%B9"
+            },
+            {
+              "text": "释放系统缓存",
+              "link": "/%E8%BF%90%E7%BB%B4/Linux/%E7%B3%BB%E7%BB%9F%E8%B0%83%E4%BC%98/%E9%87%8A%E6%94%BE%E7%B3%BB%E7%BB%9F%E7%BC%93%E5%AD%98"
+            }
+          ]
+        },
+        {
+          "text": "防火墙",
+          "collapsed": true,
+          "items": [
+            {
+              "text": "iptables",
+              "link": "/%E8%BF%90%E7%BB%B4/Linux/%E9%98%B2%E7%81%AB%E5%A2%99/iptables"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "text": "Windows",
+      "collapsed": true,
+      "items": [
+        {
+          "text": "脚本",
+          "collapsed": true,
+          "items": [
+            {
+              "text": "MySQLdump",
+              "collapsed": true,
+              "items": [
+                {
+                  "text": "powershell-mysqldump",
+                  "link": "/%E8%BF%90%E7%BB%B4/Windows/%E8%84%9A%E6%9C%AC/MySQLdump/powershell-mysqldump"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "text": "脚本",
+      "collapsed": true,
+      "items": [
+        {
+          "text": "yy",
+          "link": "/%E8%BF%90%E7%BB%B4/%E8%84%9A%E6%9C%AC/yy"
+        },
+        {
+          "text": "同步脚本",
+          "link": "/%E8%BF%90%E7%BB%B4/%E8%84%9A%E6%9C%AC/%E5%90%8C%E6%AD%A5%E8%84%9A%E6%9C%AC"
+        }
+      ]
+    }
+  ],
+  "/面试题汇总/": [
+    {
+      "text": "Docker",
+      "collapsed": true,
+      "items": [
+        {
+          "text": "Docker-compose常用例子",
+          "link": "/%E9%9D%A2%E8%AF%95%E9%A2%98%E6%B1%87%E6%80%BB/Docker/Docker-compose%E5%B8%B8%E7%94%A8%E4%BE%8B%E5%AD%90"
+        },
+        {
+          "text": "Docker",
+          "link": "/%E9%9D%A2%E8%AF%95%E9%A2%98%E6%B1%87%E6%80%BB/Docker/Docker"
+        }
+      ]
+    },
+    {
+      "text": "K8s",
+      "link": "/%E9%9D%A2%E8%AF%95%E9%A2%98%E6%B1%87%E6%80%BB/K8s"
+    },
+    {
+      "text": "Linux",
+      "link": "/%E9%9D%A2%E8%AF%95%E9%A2%98%E6%B1%87%E6%80%BB/Linux"
+    },
+    {
+      "text": "PHP",
+      "collapsed": true,
+      "items": [
+        {
+          "text": "LNMP 架构",
+          "link": "/%E9%9D%A2%E8%AF%95%E9%A2%98%E6%B1%87%E6%80%BB/PHP/LNMP%20%E6%9E%B6%E6%9E%84"
+        },
+        {
+          "text": "PHP",
+          "link": "/%E9%9D%A2%E8%AF%95%E9%A2%98%E6%B1%87%E6%80%BB/PHP/PHP"
+        },
+        {
+          "text": "网站被黑处理办法",
+          "link": "/%E9%9D%A2%E8%AF%95%E9%A2%98%E6%B1%87%E6%80%BB/PHP/%E7%BD%91%E7%AB%99%E8%A2%AB%E9%BB%91%E5%A4%84%E7%90%86%E5%8A%9E%E6%B3%95"
+        }
+      ]
+    },
+    {
+      "text": "各类中间件",
+      "link": "/%E9%9D%A2%E8%AF%95%E9%A2%98%E6%B1%87%E6%80%BB/%E5%90%84%E7%B1%BB%E4%B8%AD%E9%97%B4%E4%BB%B6"
+    },
+    {
+      "text": "数据库",
+      "link": "/%E9%9D%A2%E8%AF%95%E9%A2%98%E6%B1%87%E6%80%BB/%E6%95%B0%E6%8D%AE%E5%BA%93"
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+# Dependencies
+node_modules/
+
+# OS specific
+.DS_Store
+Thumbs.db
+
+# Build Output
+dist/
+.vitepress/dist/
+*.zip
+
+# Logs
+*.log
+
+# Editor
+.vscode/
+.idea/
+
+# Generated Content (keep config)
+obsidian2vitepress/site/docs/*
+!obsidian2vitepress/site/docs/.vitepress
