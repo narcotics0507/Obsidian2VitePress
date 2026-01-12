@@ -3,7 +3,7 @@
 [![VitePress](https://img.shields.io/badge/VitePress-1.x-646CFF.svg?logo=vite&logoColor=white)](https://vitepress.dev/)
 [![Obsidian](https://img.shields.io/badge/Writer-Obsidian-483699.svg?logo=obsidian&logoColor=white)](https://obsidian.md/)
 [![Docker](https://img.shields.io/badge/Deploy-Docker-2496ED.svg?logo=docker&logoColor=white)](https://www.docker.com/)
-[![License](https://img.shields.io/badge/License-Apache_2.0-blue.svg)](LICENSE)
+[![License](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
 
 > **极简、高效、纯静态的个人知识库系统。**
 > 
@@ -164,4 +164,4 @@ chmod -R 755 dist
 
 ## 📄 License
 
-Apache-2.0 License. Feel free to use this template for your own blog!
+MIT License. Feel free to use this template for your own blog!
