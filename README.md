@@ -1,4 +1,4 @@
-# Colonel's Blog System
+# Obsidian2VitePress
 
 [![VitePress](https://img.shields.io/badge/VitePress-1.x-646CFF.svg?logo=vite&logoColor=white)](https://vitepress.dev/)
 [![Obsidian](https://img.shields.io/badge/Writer-Obsidian-483699.svg?logo=obsidian&logoColor=white)](https://obsidian.md/)
@@ -164,4 +164,4 @@ chmod -R 755 dist
 
 ## 📄 License
 
-MIT License. Feel free to use this template for your own blog!
+Let’s fucking free!
