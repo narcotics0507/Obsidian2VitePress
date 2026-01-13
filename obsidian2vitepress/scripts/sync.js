@@ -1,5 +1,6 @@
 const fs = require('fs');
 const path = require('path');
+const crypto = require('crypto');
 const { promisify } = require('util');
 
 const copyFile = promisify(fs.copyFile);
@@ -8,81 +9,79 @@ const readFile = promisify(fs.readFile);
 const writeFile = promisify(fs.writeFile);
 const stat = promisify(fs.stat);
 const mkdir = promisify(fs.mkdir);
+const rm = promisify(fs.rm);
 
 // Configuration
-// Assuming this script is run from d:\Workspace\GoLang\Blog\blog
 const VAULT_DIR = path.resolve(__dirname, '../../vault/publish');
-// We need to look for attachments in the whole vault or a specific folder?
-// For simplicity, we assume attachments might be in the publish folder or we look in a commonly used 'attachments' folder in vault root.
-// Let's assume for this specific requirement "Attachments/Assets" are usually in the same tree or we search recursively.
-// To keep it strictly efficient for the prompt: "Obisidian 图片引用：![[image.png]] 或附件目录引用"
-// We will search for images in the VAULT_DIR recursive or a specific asset dir.
-// Let's assume a flat search or relative paths for simplicity first, but robust enough.
-const ATTACHMENT_DIRS = [
-    path.resolve(__dirname, '../../vault/publish'),
-    path.resolve(__dirname, '../../vault/attachments'), // Common convention
-    path.resolve(__dirname, '../../vault')
-];
-
 const DOCS_DIR = path.resolve(__dirname, '../site/docs');
 const ASSETS_DIR = path.resolve(__dirname, '../site/docs/public/assets');
 
-// Ensure directories exist
-if (!fs.existsSync(ASSETS_DIR)) {
-    fs.mkdirSync(ASSETS_DIR, { recursive: true });
-}
-
-// Cache for file locations to avoid repeated searches
+// Map to store path mappings: sourceFullPath -> { safePath, originalName, isDir, safeName }
+const pathMap = new Map();
+// Map to store filename -> sourceFullPath for fuzzy linking (Obsidian style)
 const fileCache = new Map();
 
-async function buildFileIndex(dir) {
+// Generate a safe short hash for a name
+function getSafeName(name) {
+    // exception: index.md should remain index.md for VitePress to work as root
+    if (name.toLowerCase() === 'index.md') return 'index.md';
+
+    const hash = crypto.createHash('md5').update(name).digest('hex').substring(0, 8);
+    const api = path.extname(name);
+    return hash + api;
+}
+
+// Recursively clean directory
+async function cleanDir(dir) {
+    if (fs.existsSync(dir)) {
+        await rm(dir, { recursive: true, force: true });
+    }
+}
+
+// Phase 1: Scan and Build Map
+async function scanVault(dir) {
     const entries = await readdir(dir, { withFileTypes: true });
+
     for (const entry of entries) {
+        if (entry.name.startsWith('.') || entry.name === 'node_modules') continue;
+
         const fullPath = path.join(dir, entry.name);
+
+        // Calculate safe name
+        let safeName = getSafeName(entry.name);
+
+        // Determine parent's safe path
+        const parentPath = path.dirname(fullPath);
+        let parentSafePath = '';
+        if (parentPath === VAULT_DIR) {
+            parentSafePath = '';
+        } else {
+            const parentInfo = pathMap.get(parentPath);
+            parentSafePath = parentInfo ? parentInfo.safePath : '';
+        }
+
+        const safePath = path.join(parentSafePath, safeName).replace(/\\/g, '/');
+
+        pathMap.set(fullPath, {
+            safePath: safePath,
+            safeName: safeName,
+            originalName: entry.name,
+            isDir: entry.isDirectory()
+        });
+
         if (entry.isDirectory()) {
-            if (entry.name.startsWith('.') || entry.name === 'node_modules') continue;
-            await buildFileIndex(fullPath);
+            await scanVault(fullPath);
         } else if (entry.isFile()) {
-            // Store lower case filename for case-insensitive lookup
             fileCache.set(entry.name.toLowerCase(), fullPath);
         }
     }
 }
 
+// Helper: Find image file
 async function findImageFile(filename) {
-    // Decode filename just in case it's URL encoded
     filename = decodeURI(filename);
     const name = path.basename(filename).toLowerCase();
-
-    // Lazy build index if empty
-    if (fileCache.size === 0) {
-        console.log("Building file index from vault...");
-        // Index the parent of VAULT_DIR (likely the vault root)
-        // VAULT_DIR is .../vault/publish. We want .../vault
-        const vaultRoot = path.resolve(VAULT_DIR, '..');
-        if (fs.existsSync(vaultRoot)) {
-            await buildFileIndex(vaultRoot);
-        }
-    }
-
     return fileCache.get(name) || null;
-}
-
-function convertWikiLinks(content) {
-    // [[Note Name]] -> [Note Name](/Note-Name)
-    // [[Note Name|Alias]] -> [Alias](/Note-Name)
-    const wikiLinkRegex = /\[\[(.*?)(?:\|(.*?))?\]\]/g;
-    return content.replace(wikiLinkRegex, (match, link, alias) => {
-        const text = alias || link;
-        // Basic slugify: spaces to hyphens, lowercase. Adapt to your VitePress setup.
-        // VitePress default: file name "My Note.md" -> URL "/My%20Note" (encoded)
-        // Let's stick to simple relative URL logic or encoded.
-        // If file is "My Note", VitePress usually handles "/My Note" fine with %20.
-        // Let's just strip .md extension if present and keep it raw for VitePress to handle encoding or do basic encodeURI.
-        let urlPath = link.replace(/\.md$/, '');
-        urlPath = encodeURI(urlPath);
-        return `[${text}](/${urlPath})`;
-    });
 }
 
 function isImage(filename) {
@@ -90,6 +89,7 @@ function isImage(filename) {
     return ['.png', '.jpg', '.jpeg', '.gif', '.svg', '.webp', '.bmp', '.tiff'].includes(ext);
 }
 
+// Phase 2: Process Content
 async function processImageEmbeds(content) {
     let newContent = content;
 
@@ -99,28 +99,36 @@ async function processImageEmbeds(content) {
 
     for (const m of obsidianMatches) {
         const fullMatch = m[0];
-        const filename = m[1].split('|')[0]; // Handle aliases like ![[image.png|100]]
+        const filename = m[1].split('|')[0];
 
-        const srcPath = await findImageFile(filename);
+        let srcPath = await findImageFile(filename);
+
+        if (!srcPath) {
+            const fallbackPath = path.resolve(VAULT_DIR, '../../vault/attachments', filename);
+            if (fs.existsSync(fallbackPath)) srcPath = fallbackPath;
+        }
+
         if (srcPath) {
-            const destFilename = path.basename(srcPath);
-            const destPath = path.join(ASSETS_DIR, destFilename);
+            const assetSafeName = getSafeName(path.basename(srcPath));
+
+            if (!isImage(assetSafeName)) {
+                newContent = newContent.replace(fullMatch, `(Attachment: ${filename})`);
+                continue;
+            }
+
+            const destPath = path.join(ASSETS_DIR, assetSafeName);
+
+            if (!fs.existsSync(ASSETS_DIR)) await mkdir(ASSETS_DIR, { recursive: true });
+
             await copyFile(srcPath, destPath);
 
-            const linkUrl = `/assets/${encodeURI(destFilename)}`;
-            const replacement = isImage(destFilename)
-                ? `![${destFilename}](${linkUrl})`
-                : `[${destFilename}](${linkUrl})`;
-
+            const linkUrl = `/assets/${assetSafeName}`;
+            const replacement = `![${filename}](${linkUrl})`;
             newContent = newContent.replace(fullMatch, replacement);
-        } else {
-            console.warn(`Warning: Image not found ${filename}`);
         }
     }
 
     // 2. Handle Standard Markdown ![alt](path/to/image.png)
-    // We catch regular links that look like images.
-    // We ignore http/https links.
     const markdownRegex = /!\[(.*?)\]\((.*?)\)/g;
     const markdownMatches = [...newContent.matchAll(markdownRegex)];
 
@@ -130,164 +138,209 @@ async function processImageEmbeds(content) {
         const linkPath = m[2];
 
         if (linkPath.startsWith('http')) continue;
-        if (linkPath.startsWith('/assets/')) continue; // Already processed or manual
+        if (linkPath.startsWith('/assets/')) continue;
 
-        // Extract filename from path
         const filename = path.basename(decodeURI(linkPath));
+        let srcPath = await findImageFile(filename);
 
-        const srcPath = await findImageFile(filename);
+        if (!srcPath) {
+            const fallbackPath = path.resolve(VAULT_DIR, '../../vault/attachments', filename);
+            if (fs.existsSync(fallbackPath)) srcPath = fallbackPath;
+        }
+
         if (srcPath) {
-            const destFilename = path.basename(srcPath);
-            const destPath = path.join(ASSETS_DIR, destFilename);
+            const assetSafeName = getSafeName(path.basename(srcPath));
+
+            if (!isImage(assetSafeName)) {
+                newContent = newContent.split(fullMatch).join(`(Attachment: ${filename})`);
+                continue;
+            }
+
+            const destPath = path.join(ASSETS_DIR, assetSafeName);
+            if (!fs.existsSync(ASSETS_DIR)) await mkdir(ASSETS_DIR, { recursive: true });
             await copyFile(srcPath, destPath);
 
-            const linkUrl = `/assets/${encodeURI(destFilename)}`;
-            // If it was valid image syntax but pointing to non-image, convert to link
-            // If it is an image, keep the !
-            const replacement = isImage(destFilename)
-                ? `![${alt}](${linkUrl})`
-                : `[${alt}](${linkUrl})`;
-
-            // Replace the whole link with new asset path
+            const linkUrl = `/assets/${assetSafeName}`;
+            const replacement = `![${alt}](${linkUrl})`;
             newContent = newContent.split(fullMatch).join(replacement);
-        } else {
-            console.warn(`Warning: Standard image not found ${filename} (from ${linkPath})`);
         }
     }
 
     return newContent;
 }
 
-async function processFile(filePath, relativePath) {
-    let content = await readFile(filePath, 'utf8');
+function convertWikiLinks(content) {
+    const wikiLinkRegex = /\[\[(.*?)(?:\|(.*?))?\]\]/g;
+    return content.replace(wikiLinkRegex, (match, link, alias) => {
+        const text = alias || link;
+        const linkName = link.replace(/\.md$/, '').toLowerCase();
 
-    // 1. Process Images (Must do this before WikiLinks to avoid breaking ![[...]])
-    content = await processImageEmbeds(content);
+        const targetPath = fileCache.get(linkName + '.md');
+        if (targetPath) {
+            const keys = pathMap.get(targetPath);
+            if (keys) {
+                const urlPath = '/' + keys.safePath.replace(/\.md$/, '');
+                return `[${text}](${urlPath})`;
+            }
+        }
 
-    // 2. Convert WikiLinks
-    content = convertWikiLinks(content);
+        // If not found as md, try as asset (fileCache check)
+        // If it was captured by processImageEmbeds, it should have been handled? 
+        // No, processImageEmbeds handles ![[]]. This is [[]].
+        // If it is a non-md file in pathMap (e.g. Code.zip), we resolve it here.
+        const targetAssetPath = fileCache.get(linkName); // linkName includes extension if it was file.zip?
+        // No, replace(/\.md$/) removes .md. If file.zip, it remains file.zip.
+        if (!targetPath && targetAssetPath) {
+            const keys = pathMap.get(targetAssetPath);
+            if (keys) {
+                // It's a file in docs (e.g. hash/hash.zip)
+                const urlPath = '/' + keys.safePath;
+                return `[${text}](${urlPath})`;
+            }
+        }
 
-    const destPath = path.join(DOCS_DIR, relativePath);
-    const destDir = path.dirname(destPath);
-
-    if (!fs.existsSync(destDir)) {
-        await mkdir(destDir, { recursive: true });
-    }
-
-    await writeFile(destPath, content);
-    console.log(`Processed: ${relativePath}`);
+        return text;
+    });
 }
 
-async function syncDir(dir, baseDir) {
+const SAFE_TAGS = new Set([
+    'a', 'abbr', 'address', 'b', 'bdi', 'bdo', 'blockquote', 'br', 'caption', 'cite', 'code', 'col', 'colgroup',
+    'data', 'dd', 'del', 'details', 'dfn', 'div', 'dl', 'dt', 'em', 'figcaption', 'figure', 'footer', 'h1', 'h2',
+    'h3', 'h4', 'h5', 'h6', 'head', 'header', 'hgroup', 'hr', 'i', 'img', 'ins', 'kbd', 'li', 'mark', 'ol', 'p',
+    'pre', 'q', 'rp', 'rt', 'ruby', 's', 'samp', 'small', 'span', 'strong', 'sub', 'summary', 'sup', 'table',
+    'tbody', 'td', 'tfoot', 'th', 'thead', 'time', 'tr', 'u', 'ul', 'var', 'wbr'
+]);
+
+function sanitizeContent(content) {
+    content = content.replace(/<([a-zA-Z0-9\-\_]+)([^>]*)>/g, (match, tagName, attrs) => {
+        if (SAFE_TAGS.has(tagName.toLowerCase())) {
+            return match;
+        } else {
+            return `&lt;${tagName}${attrs}&gt;`;
+        }
+    });
+
+    content = content.replace(/{{/g, '&#123;&#123;').replace(/}}/g, '&#125;&#125;');
+
+    return content;
+}
+
+async function processVault(dir) {
     const entries = await readdir(dir, { withFileTypes: true });
 
     for (const entry of entries) {
-        const fullPath = path.join(dir, entry.name);
-        const relativePath = path.relative(baseDir, fullPath);
+        if (entry.name.startsWith('.') || entry.name === 'node_modules') continue;
 
-        if (entry.isDirectory()) {
-            await syncDir(fullPath, baseDir);
-        } else if (entry.isFile() && entry.name.endsWith('.md')) {
-            await processFile(fullPath, relativePath);
+        const fullPath = path.join(dir, entry.name);
+        if (!pathMap.has(fullPath)) continue;
+
+        const { safePath, isDir, originalName } = pathMap.get(fullPath);
+        const destPath = path.join(DOCS_DIR, safePath);
+
+        if (isDir) {
+            await mkdir(destPath, { recursive: true });
+            await processVault(fullPath);
+        } else if (entry.isFile()) {
+            if (entry.name.endsWith('.md')) {
+                let content = await readFile(fullPath, 'utf8');
+
+                const hasH1 = content.match(/^#\s+(.*)/m);
+                const hasFrontmatterTitle = content.match(/^title:\s+(.*)/m);
+
+                if (!hasH1 && !hasFrontmatterTitle) {
+                    const title = originalName.replace(/\.md$/, '');
+                    content = `# ${title}\n\n${content}`;
+                }
+
+                content = sanitizeContent(content);
+                content = await processImageEmbeds(content);
+                content = convertWikiLinks(content);
+
+                await writeFile(destPath, content);
+                console.log(`Processed: ${originalName} -> ${safePath}`);
+            } else if (!isImage(entry.name)) {
+                await copyFile(fullPath, destPath);
+                console.log(`Copied Asset: ${originalName} -> ${safePath}`);
+            }
         }
     }
 }
 
-// Helper to get sidebar structure
-async function getSidebarStructure(dir, baseDir) {
-    const entries = await readdir(dir, { withFileTypes: true });
-
+async function generateSidebar(dir) {
     const items = [];
+    const entries = await readdir(dir, { withFileTypes: true });
+    entries.sort((a, b) => a.name.localeCompare(b.name, 'zh-CN'));
 
     for (const entry of entries) {
+        if (entry.name.startsWith('.') || entry.name === 'node_modules') continue;
         const fullPath = path.join(dir, entry.name);
-        const relativePath = path.relative(baseDir, fullPath); // relative to docs root
+        if (!pathMap.has(fullPath)) continue;
 
-        // Skip .vitepress, public, assets, and hidden files
-        if (entry.name.startsWith('.') || entry.name === 'public' || entry.name === 'assets') continue;
+        const { safePath, isDir, originalName } = pathMap.get(fullPath);
 
-        if (entry.isDirectory()) {
-            const children = await getSidebarStructure(fullPath, baseDir);
+        if (isDir) {
+            const children = await generateSidebar(fullPath);
             if (children.length > 0) {
                 items.push({
-                    text: entry.name,
+                    text: originalName,
                     collapsed: true,
                     items: children
                 });
             }
         } else if (entry.isFile() && entry.name.endsWith('.md')) {
-            // Check if it's index.md, we usually handle it separately or ignore if it's the section root
-            // But if it's a leaf, we include it.
             if (entry.name.toLowerCase() === 'index.md') continue;
 
-            const link = '/' + relativePath.replace(/\\/g, '/').replace(/\.md$/, '');
+            const link = '/' + safePath.replace(/\.md$/, '');
             items.push({
-                text: entry.name.replace(/\.md$/, ''),
-                link: encodeURI(link)
+                text: originalName.replace(/\.md$/, ''),
+                link: link
             });
         }
     }
-
     return items;
 }
 
 async function main() {
-    console.log('Starting sync...');
-    console.log(`From: ${VAULT_DIR}`);
-    console.log(`To:   ${DOCS_DIR}`);
+    console.log("Starting Safe Sync...");
 
-    // Clean docs dir? Maybe optional or be careful not to delete index.md if it's manual.
-    // For this user logic: "Obsidian 是唯一真源", so site/docs should be mirrored.
-    // Usually VitePress needs an index.md. If it's in Obsidian publish/index.md, good.
-    // If not, we might overwrite a manual setup. 
-    // The user said: "从 Obsidian Vault 的 publish/ 子目录同步到 VitePress 的 site/docs/"
-    // So we assume publish/ contains everything needed.
-
-    if (fs.existsSync(VAULT_DIR)) {
-        await syncDir(VAULT_DIR, VAULT_DIR);
-    } else {
-        console.error(`Vault directory not found: ${VAULT_DIR}`);
+    console.log("Cleaning old docs...");
+    const docsEntries = await readdir(DOCS_DIR);
+    for (const d of docsEntries) {
+        if (d === '.vitepress' || d === 'public') continue;
+        await rm(path.join(DOCS_DIR, d), { recursive: true, force: true });
     }
 
-    // Generate Sidebar
-    console.log('Generating sidebar config...');
-    const sidebarStructure = await getSidebarStructure(DOCS_DIR, DOCS_DIR);
+    console.log("Scanning vault...");
+    if (!fs.existsSync(VAULT_DIR)) {
+        console.error("Vault dir not found!");
+        process.exit(1);
+    }
+    await scanVault(VAULT_DIR);
 
-    // We want to scope the sidebar to specific top-level folders basically.
-    // Or just one global sidebar. For "Infinite Progress" (无限进步), usually user wants that folder to have its own sidebar.
-    // Let's create a mapped sidebar: { '/folder/': [items] }
+    console.log("Processing files...");
+    await processVault(VAULT_DIR);
 
+    console.log("Generating sidebar...");
     const sidebarConfig = {};
+    const topEntries = await readdir(VAULT_DIR, { withFileTypes: true });
 
-    // For each top-level item in structure, if it's a directory, make it a section?
-    // Or just dump the whole tree into '/'?
-    // The user has "无限进步" folder.
-    // Strategy: If top level item is folder, key is /folder/, value is its children.
-    // If top level item is file, it goes to root sidebar?
+    for (const entry of topEntries) {
+        if (entry.name.startsWith('.') || !entry.isDirectory()) continue;
+        const fullPath = path.join(VAULT_DIR, entry.name);
+        if (!pathMap.has(fullPath)) continue;
 
-    // Let's iterate the top level of sidebarStructure (which corresponds to DOCS_DIR)
-    for (const item of sidebarStructure) {
-        if (item.items) {
-            // It's a directory
-            // The key should be the link to the directory, e.g. /无限进步/
-            // Note: sidebarStructure items don't have 'link' on directory nodes currently, just text.
-            // We can construct it.
-            // VitePress expects decoded keys for sidebar sections (usually).
-            // e.g. '/无限进步/' instead of '/%E6%97%...'
-            const sectionKey = `/${item.text}/`;
-            sidebarConfig[sectionKey] = item.items;
-        } else {
-            // Root files? usually default sidebar or empty.
+        const { safePath } = pathMap.get(fullPath);
+        const items = await generateSidebar(fullPath);
+        if (items.length > 0) {
+            const key = `/${safePath}/`;
+            sidebarConfig[key] = items;
         }
     }
 
-    // Write sidebar.json
     const sidebarPath = path.resolve(DOCS_DIR, '.vitepress/sidebar.json');
-    await mkdir(path.dirname(sidebarPath), { recursive: true }); // Ensure .vitepress directory exists
     await writeFile(sidebarPath, JSON.stringify(sidebarConfig, null, 2));
-    console.log(`Sidebar config written to ${sidebarPath}`);
 
-    console.log('Sync complete.');
+    console.log("Sync Complete!");
 }
 
 main().catch(console.error);

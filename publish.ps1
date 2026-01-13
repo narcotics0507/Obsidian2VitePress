@@ -6,6 +6,9 @@ node obsidian2vitepress/scripts/sync.js
 Write-Host "2. Building VitePress site..."
 Set-Location obsidian2vitepress/site
 npm run docs:build
+if ($LASTEXITCODE -ne 0) {
+    Write-Warning "Build reported failure, but attempting to package anyway..."
+}
 Set-Location ../..
 
 $distPath = "obsidian2vitepress/site/docs/.vitepress/dist"
